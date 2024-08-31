@@ -1,0 +1,2325 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unidad 7: Amplificadores Operacionales</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .section-content {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Unidad 7: Amplificadores Operacionales</h1>
+  <nav>
+    <ul>
+      <li><a href="#" onclick="showSection('Introduccion')">7.1 Introducción a los amplificadores operacionales</a></li>
+      <li><a href="#" onclick="showSection('Opamp-modo-lineal')">7.2 Configuraciones circuitales típicas con OPAMP en
+          modo lineal</a></li>
+      <li><a href="#" onclick="showSection('Salida-Push-Pull')">7.3 Configuración interna: salida push-pull del
+          amplificador operacional, OPAMP con salida riel a riel</a></li>
+      <li><a href="#" onclick="showSection('Opamp-modo-no-lineal')">7.4 Utilización de OPAMP en modo no lineal</a></li>
+      <li><a href="#" onclick="showSection('Open-Collector')">7.5 Opamp con salida colector abierto</a></li>
+      <li><a href="#" onclick="showSection('Especificaciones')">7.6 Especificaciones de los opamps</a></li>
+      <li><a href="#" onclick="showSection('Filtros')">7.7 Filtros Analógicos</a></li>
+      <!-- Agrega otros enlaces aquí -->
+    </ul>
+  </nav>
+
+  <div id="Introduccion" class="section-content">
+    <h2>7.1 Introducción a los amplificadores operacionales</h2>
+    <p>Contenido sobre la introducción al curso.</p>
+
+    <!-- Primera fila de columnas -->
+    <div class="row">
+      <div class="column">
+        <h3>Operational Amplifier</h3>
+        <p> </p>
+        <!-- Imagen de la solucion de ecuaciones -->
+        <img src="images/intro1.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+        <img src="images/intro2.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+        <img src="images/intro3.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+
+        <style>
+          .file-download {
+            margin-top: 20px;
+            text-align: center;
+          }
+
+          .file-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .file-download a:hover {
+            background-color: #0056b3;
+          }
+        </style>
+
+      </div>
+
+      <div class="column">
+        <!-- Formulario para el analisis en la segunda columna -->
+        <div class="container">
+          <h1> </h1>
+          <img src="images/intro4.png" alt="Dibujo del diodo" style="width: 200%; height: auto;">
+        </div>
+
+      </div>
+      <div class="column">
+        <!-- Formulario para el diseño en la tercera columna -->
+        <div class="container">
+          <h1> </h1>
+          <img src="images/intro5.png" alt="Dibujo del diodo" style="width: 200%; height: auto;">
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div id="Introduccion" class="section-content">
+    <h2>7.1 Introducción a los amplificadores operacionales</h2>
+    <p>Contenido sobre la introducción al curso.</p>
+
+    <!-- Primera fila de columnas -->
+    <div class="row">
+      <div class="column">
+        <h3>Operational Amplifier</h3>
+        <p> </p>
+        <!-- Imagen de la solucion de ecuaciones -->
+        <img src="images/intro1.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+        <img src="images/intro2.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+        <img src="images/intro3.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+
+        <style>
+          .file-download {
+            margin-top: 20px;
+            text-align: center;
+          }
+
+          .file-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .file-download a:hover {
+            background-color: #0056b3;
+          }
+        </style>
+
+      </div>
+
+      <div class="column">
+        <!-- Formulario para el analisis en la segunda columna -->
+        <div class="container">
+          <h1>Análisis</h1>
+          <img src="images/intro4.png" alt="Dibujo del diodo" style="width: 200%; height: auto;">
+        </div>
+
+      </div>
+      <div class="column">
+        <!-- Formulario para el diseño en la tercera columna -->
+        <div class="container">
+          <h1>Diseño</h1>
+          <img src="images/intro5.png" alt="Dibujo del diodo" style="width: 200%; height: auto;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="Opamp-modo-lineal" class="section-content">
+    <h2>7.2 Configuraciones circuitales típicas con
+      OPAMP en modo lineal</h2>
+    <p> </p>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection('Amplificador-No-Inversor')">7.2.1 Amplificador No Inversor</a></li>
+        <li><a href="#" onclick="showSection('Buffer')">7.2.2 Buffer o seguidor de voltaje</a></li>
+        <li><a href="#" onclick="showSection('Amplificador-Inversor')">7.2.3 Amplificador Inversor</a></li>
+        <li><a href="#" onclick="showSection('Sumador-Inversor')">7.2.4 Sumador Inversor</a></li>
+        <li><a href="#" onclick="showSection('Solucion-ecuaciones')">7.2.5 Solución de ecuaciones lineales</a></li>
+        <li><a href="#" onclick="showSection('Amplificador-Restador')">7.2.6 Amplificador restador</a></li>
+        <li><a href="#" onclick="showSection('Amplificador-Instrumentacion')">7.2.7 Amplificador de
+            Instrumentación</a>
+        </li>
+        <li><a href="#" onclick="showSection('Derivador')">7.2.8 Derivador</a></li>
+        <li><a href="#" onclick="showSection('Integrador')">7.2.9 Integrador</a></li>
+        <li><a href="#" onclick="showSection('Rectificador')">7.2.10 Amplificador Rectificador</a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+
+
+  <div id="Solucion-ecuaciones" class="section-content">
+    <h3>7.2.5 Solución de ecuaciones lineales</h3>
+    <p>Contenido sobre la introducción al curso.</p>
+    <img src="images/solucionecuacionlineal.png" alt="Dibujo del diodo" style="width: 50%; height: auto;">
+
+    <h3>y=mx+b</h3>
+
+    <!-- Primera fila de columnas de solucion de ecuaciones-->
+    <div class="row">
+      <div class="column">
+        <h3>Caso a: y = mx + b </h3>
+        <p> </p>
+        <!-- Imagen de la solucion de ecuaciones -->
+        <img src="images/mxb1.png" alt="Dibujo del diodo" style="width: 50%; height: auto;">
+        <img src="images/mxb11.png" alt="Dibujo del diodo" style="width: 200; height: 100;">
+
+        <style>
+          .file-download {
+            margin-top: 20px;
+            text-align: center;
+          }
+
+          .file-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .file-download a:hover {
+            background-color: #0056b3;
+          }
+        </style>
+
+
+        <div class="container">
+          <h1> </h1>
+          <div class="file-download">
+            <a href="Rectificador.pdsprj" download>Descargar Archivo de Proteus</a>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="column">
+
+        <!-- Formulario para el analisis en la segunda columna -->
+        <style>
+          .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: 20px;
+          }
+
+          .form-group {
+            margin-bottom: 15px;
+          }
+
+          .form-group label {
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+          }
+
+          .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+          .result {
+            margin-top: 15px;
+            font-size: 18px;
+          }
+        </style>
+        <!-- Caso a ANALISIS -->
+        <div class="container">
+          <h1>Análisis</h1>
+          <div class="form-group">
+            <label for="VCCsecaa">VCC (V):</label>
+            <input type="number" id="VCCsecaa" placeholder="Ingrese el valor de VCC (V)">
+          </div>
+          <div class="form-group">
+            <label for="R1secaa">R1 (kΩ):</label>
+            <input type="number" id="R1secaa" placeholder="Ingrese el valor de R1 (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="R2secaa">R2 (kΩ):</label>
+            <input type="number" id="R2secaa" placeholder="Ingrese el valor de R2 (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="RFsecaa">RF (kΩ):</label>
+            <input type="number" id="RFsecaa" placeholder="Asuma el valor de RF (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="RGsecaa">RG (kΩ):</label>
+            <input type="number" id="RGsecaa" placeholder="Asuma el valor de RG (kΩ)">
+          </div>
+
+
+          <div class="form-group">
+            <button onclick="calcularsecaa()">Calcular</button>
+          </div>
+          <div class="result" id="result"></div>
+        </div>
+
+        <div class="output-box">
+          <p id="resultadosecaam">m : --</p>
+        </div>
+
+        <div class="output-box">
+          <p id="resultadosecaab">b : --</p>
+        </div>
+
+
+
+      </div>
+      <div class="column">
+
+
+        <!-- Formulario para el diseño en la tercera columna -->
+        <style>
+          .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: 20px;
+          }
+
+          .form-group {
+            margin-bottom: 15px;
+          }
+
+          .form-group label {
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+          }
+
+          .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+          .result {
+            margin-top: 15px;
+            font-size: 18px;
+          }
+        </style>
+
+        <!-- Caso a DISEÑO -->
+        <div class="container">
+          <h1>Diseño</h1>
+          <div class="form-group">
+            <label for="VCC">VCC (V):</label>
+            <input type="number" id="VCC" placeholder="Ingrese el valor de VCC (V)">
+          </div>
+          <div class="form-group">
+            <label for="m">m:</label>
+            <input type="number" id="m" placeholder="Ingrese el valor de m">
+          </div>
+          <div class="form-group">
+            <label for="b">b:</label>
+            <input type="number" id="b" placeholder="Ingrese el valor de b">
+          </div>
+          <div class="form-group">
+            <label for="R2">R2 (kΩ):</label>
+            <input type="number" id="R2" placeholder="Asuma un valor para R2 (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="RG">RG (kΩ):</label>
+            <input type="number" id="RG" placeholder="Asuma un valor de RG (kΩ)">
+          </div>
+
+          <div class="form-group">
+            <button onclick="calcularse1()">Calcular</button>
+          </div>
+          <div class="result" id="result"></div>
+        </div>
+
+
+
+        <div class="output-box">
+          <p id="resultadose1">R1 (kΩ): --</p>
+        </div>
+
+        <div class="output-box">
+          <p id="resultadose2">RF (kΩ): --</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Segunda fila de columnas de solucion de ecuaciones -->
+    <div class="row">
+      <div class="column">
+        <h3>Caso b: y = m*x - b</h3>
+        <p> </p>
+        <!-- Imagen de la solucion de ecuaciones -->
+        <img src="images/casob.png" alt="Dibujo del diodo" style="width: 50%; height: auto;">
+        <img src="images/mxb11.png" alt="Dibujo del diodo" style="width: 200; height: 100;">
+
+        <style>
+          .file-download {
+            margin-top: 20px;
+            text-align: center;
+          }
+
+          .file-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .file-download a:hover {
+            background-color: #0056b3;
+          }
+        </style>
+
+
+        <div class="container">
+          <h1> </h1>
+          <div class="file-download">
+            <a href="Rectificador.pdsprj" download>Descargar Archivo de Proteus</a>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="column">
+
+        <!-- Formulario para el analisis en la segunda columna -->
+        <style>
+          .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: 20px;
+          }
+
+          .form-group {
+            margin-bottom: 15px;
+          }
+
+          .form-group label {
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+          }
+
+          .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+          .result {
+            margin-top: 15px;
+            font-size: 18px;
+          }
+        </style>
+
+        <!-- Caso B ANALISIS -->
+        <div class="container">
+          <h1>Análisis</h1>
+          <div class="form-group">
+            <label for="VCCsecba">VCC (V):</label>
+            <input type="number" id="VCCsecba" placeholder="Ingrese el valor de VCC (V)">
+          </div>
+          <div class="form-group">
+            <label for="R1secba">R1 (kΩ):</label>
+            <input type="number" id="R1secba" placeholder="Ingrese el valor de R1 (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="R2secba">R2 (kΩ):</label>
+            <input type="number" id="R2secba" placeholder="Ingrese el valor de R2 (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="RFsecba">RF (kΩ):</label>
+            <input type="number" id="RFsecba" placeholder="Ingrese el valor de RF (kΩ)">
+          </div>
+          
+
+          <div class="form-group">
+            <button onclick="calcularsecba()">Calcular</button>
+          </div>
+          <div class="result" id="result"></div>
+        </div>
+
+
+
+        <div class="output-box">
+          <p id="resultadosecbam">m: --</p>
+        </div>
+
+        <div class="output-box">
+          <p id="resultadosecbab">b: --</p>
+        </div>
+
+        
+
+      </div>
+      <div class="column">
+
+
+        <!-- Formulario para el diseño en la tercera columna -->
+        <style>
+          .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: 20px;
+          }
+
+          .form-group {
+            margin-bottom: 15px;
+          }
+
+          .form-group label {
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+          }
+
+          .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+          .result {
+            margin-top: 15px;
+            font-size: 18px;
+          }
+        </style>
+
+        <!-- Caso B DISEÑO -->
+
+        <div class="container">
+          <h1>Diseño</h1>
+          <div class="form-group">
+            <label for="VCCsecbd">VCC (V):</label>
+            <input type="number" id="VCCsecbd" placeholder="Ingrese el valor de VCC (V)">
+          </div>
+          <div class="form-group">
+            <label for="msecbd">m:</label>
+            <input type="number" id="msecbd" placeholder="Ingrese el valor de m">
+          </div>
+          <div class="form-group">
+            <label for="bsecbd">b:</label>
+            <input type="number" id="bsecbd" placeholder="Ingrese el valor de b">
+          </div>
+          <div class="form-group">
+            <label for="R1secbd">R1 (kΩ):</label>
+            <input type="number" id="R1secbd" placeholder="Asuma un valor para R1 (kΩ)">
+          </div>
+
+
+          <div class="form-group">
+            <button onclick="calcularsecbd()">Calcular</button>
+          </div>
+          <div class="result" id="result"></div>
+        </div>
+
+
+
+        <div class="output-box">
+          <p id="resultadosecbdRF">RF (kΩ): --</p>
+        </div>
+
+        <div class="output-box">
+          <p id="resultadosecbdR2">R2 (kΩ): --</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Tercera fila de columnas de solucion de ecuaciones -->
+    <div class="row">
+      <div class="column">
+        <h3>Caso c: y = - m * x + b</h3>
+        <p> </p>
+        <!-- Imagen de la solucion de ecuaciones -->
+        <img src="images/casoc.png" alt="Dibujo del diodo" style="width: 50%; height: auto;">
+        <img src="images/mxb11.png" alt="Dibujo del diodo" style="width: 200; height: 100;">
+
+        <style>
+          .file-download {
+            margin-top: 20px;
+            text-align: center;
+          }
+
+          .file-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .file-download a:hover {
+            background-color: #0056b3;
+          }
+        </style>
+
+
+        <div class="container">
+          <h1> </h1>
+          <div class="file-download">
+            <a href="Rectificador.pdsprj" download>Descargar Archivo de Proteus</a>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="column">
+
+        <!-- Formulario para el analisis en la segunda columna -->
+        <style>
+          .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: 20px;
+          }
+
+          .form-group {
+            margin-bottom: 15px;
+          }
+
+          .form-group label {
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+          }
+
+          .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+          .result {
+            margin-top: 15px;
+            font-size: 18px;
+          }
+        </style>
+
+        <!-- Caso C ANALISIS -->
+        <div class="container">
+          <h1>Análisis</h1>
+          <div class="form-group">
+            <label for="VCCsecca">VCC (V):</label>
+            <input type="number" id="VCCsecca" placeholder="Ingrese el valor de VCC (V)">
+          </div>
+          <div class="form-group">
+            <label for="R1secca">R1 (kΩ):</label>
+            <input type="number" id="R1secca" placeholder="Ingrese el valor de R1 (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="R2secca">R2 (kΩ):</label>
+            <input type="number" id="R2secca" placeholder="Ingrese el valor de R2 (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="RFsecca">RF (kΩ):</label>
+            <input type="number" id="RFsecca" placeholder="Ingrese el valor de RF (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="RGsecca">RG (kΩ):</label>
+            <input type="number" id="RGsecca" placeholder="Ingrese el valor de RG (kΩ)">
+          </div>
+         
+
+          <div class="form-group">
+            <button onclick="calcularsecca()">Calcular</button>
+          </div>
+          <div class="result" id="result"></div>
+        </div>
+
+
+
+        <div class="output-box">
+          <p id="resultadoseccam">m: --</p>
+        </div>
+
+        <div class="output-box">
+          <p id="resultadoseccab">b: --</p>
+        </div>
+
+
+      </div>
+      <div class="column">
+
+
+        <!-- Formulario para el diseño en la tercera columna -->
+        <style>
+          .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: 20px;
+          }
+
+          .form-group {
+            margin-bottom: 15px;
+          }
+
+          .form-group label {
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+          }
+
+          .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+          .result {
+            margin-top: 15px;
+            font-size: 18px;
+          }
+        </style>
+
+
+
+        <!-- Caso C DISEÑO -->
+        <div class="container">
+          <h1>Diseño</h1>
+          <div class="form-group">
+            <label for="VCCseccd">VCC (V):</label>
+            <input type="number" id="VCCseccd" placeholder="Ingrese el valor de VCC (V)">
+          </div>
+          <div class="form-group">
+            <label for="mseccd">m:</label>
+            <input type="number" id="mseccd" placeholder="Ingrese el valor de m (debe ser negativo)">
+          </div>
+          <div class="form-group">
+            <label for="bseccd">b:</label>
+            <input type="number" id="bseccd" placeholder="Ingrese el valor de b">
+          </div>
+          <div class="form-group">
+            <label for="RGseccd">RG (kΩ):</label>
+            <input type="number" id="RGseccd" placeholder="Asuma un valor de RG (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="R2seccd">R2 (kΩ):</label>
+            <input type="number" id="R2seccd" placeholder="Asuma un valor para R2 (kΩ)">
+          </div>
+          
+
+          <div class="form-group">
+            <button onclick="calcularseccd()">Calcular</button>
+          </div>
+          <div class="result" id="result"></div>
+        </div>
+
+
+
+        <div class="output-box">
+          <p id="resultadoseccdRF">RF (kΩ): --</p>
+        </div>
+
+        <div class="output-box">
+          <p id="resultadoseccdR1">R1 (kΩ): --</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Cuarta fila de columnas de solucion de ecuaciones -->
+    <div class="row">
+      <div class="column">
+        <h3>Caso d: y = -m* x - b</h3>
+        <p> </p>
+        <!-- Imagen de la solucion de ecuaciones -->
+        <img src="images/casod.png" alt="Dibujo del diodo" style="width: 50%; height: auto;">
+        <img src="images/mxb11.png" alt="Dibujo del diodo" style="width: 200; height: 100;">
+
+        <style>
+          .file-download {
+            margin-top: 20px;
+            text-align: center;
+          }
+
+          .file-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .file-download a:hover {
+            background-color: #0056b3;
+          }
+        </style>
+
+
+        <div class="container">
+          <h1> </h1>
+          <div class="file-download">
+            <a href="Rectificador.pdsprj" download>Descargar Archivo de Proteus</a>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="column">
+
+        <!-- Formulario para el analisis en la segunda columna -->
+        <style>
+          .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: 20px;
+          }
+
+          .form-group {
+            margin-bottom: 15px;
+          }
+
+          .form-group label {
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+          }
+
+          .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+          .result {
+            margin-top: 15px;
+            font-size: 18px;
+          }
+        </style>
+
+
+        <!-- Caso D ANALISIS -->
+        <div class="container">
+          <h1>Análisis</h1>
+          <div class="form-group">
+            <label for="VCCsecda">VCC (V):</label>
+            <input type="number" id="VCCsecda" placeholder="Ingrese el valor de VCC (V)">
+          </div>
+          <div class="form-group">
+            <label for="RFsecda">RF (kΩ):</label>
+            <input type="number" id="RFsecda" placeholder="Ingrese el valor de RF (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="R1secda">R1 (kΩ):</label>
+            <input type="number" id="R1secda" placeholder="Ingrese el valor de R1 (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="R2secda">R2 (kΩ):</label>
+            <input type="number" id="R2secda" placeholder="Ingrese el valor de R2 (kΩ)">
+          </div>
+          
+         
+          <div class="form-group">
+            <button onclick="calcularsecda()">Calcular</button>
+          </div>
+          <div class="result" id="result"></div>
+        </div>
+
+
+
+        <div class="output-box">
+          <p id="resultadosecdam">m: --</p>
+        </div>
+
+        <div class="output-box">
+          <p id="resultadosecdab">b: --</p>
+        </div>
+
+        
+
+      </div>
+      <div class="column">
+
+
+        <!-- Formulario para el diseño en la tercera columna -->
+        <style>
+          .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: 20px;
+          }
+
+          .form-group {
+            margin-bottom: 15px;
+          }
+
+          .form-group label {
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+          }
+
+          .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+          .result {
+            margin-top: 15px;
+            font-size: 18px;
+          }
+        </style>
+
+
+        <!-- Caso D DISEÑO -->
+        <div class="container">
+          <h1>Diseño</h1>
+          <div class="form-group">
+            <label for="VCCsecdd">VCC (V):</label>
+            <input type="number" id="VCCsecdd" placeholder="Ingrese el valor de VCC (V)">
+          </div>
+          <div class="form-group">
+            <label for="msecdd">m:</label>
+            <input type="number" id="msecdd" placeholder="Ingrese el valor de m (debe ser negativo)">
+          </div>
+          <div class="form-group">
+            <label for="bsecdd">b:</label>
+            <input type="number" id="bsecdd" placeholder="Ingrese el valor de b (debe ser negativo)">
+          </div>
+          <div class="form-group">
+            <label for="R1secdd">R1 (kΩ):</label>
+            <input type="number" id="R1secdd" placeholder="Asuma un valor para R1 (kΩ)">
+          </div>
+          
+
+          <div class="form-group">
+            <button onclick="calcularsecdd()">Calcular</button>
+          </div>
+          <div class="result" id="result"></div>
+        </div>
+
+
+
+        <div class="output-box">
+          <p id="resultadosecddRF">RF (kΩ): --</p>
+        </div>
+
+        <div class="output-box">
+          <p id="resultadosecddR2">R2 (kΩ): --</p>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+  
+
+
+
+
+
+  <div id="Amplificador-No-Inversor" class="section-content">
+    <h3>7.2.1 Amplificador No Inversor</h3>
+    <p> </p>
+
+
+    <!-- Primera fila de columnas -->
+    <div class="row">
+      <div class="column">
+
+        <p> </p>
+        <!-- Imagen de la solucion de ecuaciones -->
+        <img src="images/ampninv1.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+
+
+        <style>
+          .file-download {
+            margin-top: 20px;
+            text-align: center;
+          }
+
+          .file-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .file-download a:hover {
+            background-color: #0056b3;
+          }
+        </style>
+      </div>
+
+      <div class="column">
+        <!-- Formulario para el analisis en la segunda columna -->
+
+        <img src="images/ampninv2.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+
+      </div>
+      <div class="column">
+        <!-- Formulario para el diseño en la tercera columna -->
+
+        <img src="images/ampninv3.png" alt="Dibujo del diodo" style="width: 80%; height: auto;">
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="Buffer" class="section-content">
+    <h3>7.2.2 Buffer o Seguidor de voltaje</h3>
+    <p> </p>
+
+
+    <!-- Primera fila de columnas -->
+    <div class="row">
+      <div class="column">
+
+        <p> </p>
+        <!-- Imagen de la solucion de ecuaciones -->
+        <img src="images/buffer.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+
+
+        <style>
+          .file-download {
+            margin-top: 20px;
+            text-align: center;
+          }
+
+          .file-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .file-download a:hover {
+            background-color: #0056b3;
+          }
+        </style>
+      </div>
+
+      <div class="column">
+        <!-- Formulario para el analisis en la segunda columna -->
+
+        <img src="images/buffer1.png" alt="Dibujo del diodo" style="width: 75%; height: auto;">
+
+      </div>
+      <div class="column">
+        <!-- Formulario para el diseño en la tercera columna -->
+        <p>Ejercicio </p>
+        <img src="images/ampsi3.png" alt="Dibujo del diodo" style="width: 80%; height: auto;">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div id="Amplificador-Inversor" class="section-content">
+    <h3>7.2.3 Amplificador Inversor</h3>
+    <p> </p>
+
+
+    <!-- Primera fila de columnas -->
+    <div class="row">
+      <div class="column">
+
+        <p> </p>
+        <!-- Imagen de la solucion de ecuaciones -->
+        <img src="images/ampinv1.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+
+
+        <style>
+          .file-download {
+            margin-top: 20px;
+            text-align: center;
+          }
+
+          .file-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .file-download a:hover {
+            background-color: #0056b3;
+          }
+        </style>
+      </div>
+
+      <div class="column">
+        <!-- Formulario para el analisis en la segunda columna -->
+
+        <img src="images/ampinv2.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+
+      </div>
+      <div class="column">
+        <!-- Formulario para el diseño en la tercera columna -->
+
+        <img src="images/ampinv3.png" alt="Dibujo del diodo" style="width: 80%; height: auto;">
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div id="Sumador-Inversor" class="section-content">
+    <h3>7.2.4 Sumador Inversor</h3>
+    <p> </p>
+
+
+    <!-- Primera fila de columnas -->
+    <div class="row">
+      <div class="column">
+
+        <p> </p>
+        <!-- Imagen de la solucion de ecuaciones -->
+        <img src="images/ampsi1.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+
+
+        <style>
+          .file-download {
+            margin-top: 20px;
+            text-align: center;
+          }
+
+          .file-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .file-download a:hover {
+            background-color: #0056b3;
+          }
+        </style>
+      </div>
+
+      <div class="column">
+        <!-- Formulario para el analisis en la segunda columna -->
+
+        <img src="images/ampsi2.png" alt="Dibujo del diodo" style="width: 75%; height: auto;">
+
+      </div>
+      <div class="column">
+        <!-- Formulario para el diseño en la tercera columna -->
+        <p>Ejercicio </p>
+        <img src="images/ampsi3.png" alt="Dibujo del diodo" style="width: 80%; height: auto;">
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div id="Amplificador-Restador" class="section-content">
+    <h3>7.2.6 Amplificador Restador</h3>
+    <p> </p>
+    <!-- Primera fila de columna de amplificador restador-->
+    <div class="row">
+      <div class="column">
+        <p> </p>
+        <!-- Imagen de la solucion de ecuaciones -->
+        <img src="images/ar1.png" alt="Dibujo del diodo" style="width: 50%; height: auto;">
+
+        <style>
+          .file-download {
+            margin-top: 20px;
+            text-align: center;
+          }
+
+          .file-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .file-download a:hover {
+            background-color: #0056b3;
+          }
+        </style>
+
+      </div>
+
+      <div class="column">
+        <!-- Formulario para el analisis en la segunda columna -->
+        <img src="images/ar2.png" alt="Dibujo del diodo" style="width: 40%; height: auto;">
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+  <div id="Amplificador-Instrumentacion" class="section-content">
+    <h3>7.2.7 Amplificador de Instrumentacion</h3>
+    <p> </p>
+
+    <!-- Primera fila de columnas del ina -->
+    <div class="row">
+      <!-- Primera columna de la fila 1 del ina -->
+      <div class="column">
+        <p> </p>
+        <!-- Imagen de la solucion de ecuaciones -->
+        <img src="images/ina1.png" alt="Dibujo del INA" style="width: 100%; height: auto;">
+
+
+        <style>
+          .file-download {
+            margin-top: 20px;
+            text-align: center;
+          }
+
+          .file-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .file-download a:hover {
+            background-color: #0056b3;
+          }
+        </style>
+
+      </div>
+      <!-- Segunda columna de la fila 1 del ina -->
+      <div class="column">
+        <!-- Formulario para el analisis en la segunda columna -->
+        <img src="images/ina2.png" alt="Dibujo del INA" style="width: 60%; height: auto;">
+
+
+      </div>
+      <!-- Tercera columna de la fila 1 del ina -->
+      <div class="column">
+        <!-- Formulario para el diseño en la tercera columna -->
+        <img src="images/ina3.png" alt="Dibujo del INA" style="width: 40%; height: auto;">
+
+        <img src="images/ina4.png" alt="Dibujo del INA" style="width: 40%; height: auto;">
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="column">
+        <!-- Imagen del INA -->
+        <img src="images/INAconR.png" alt="Dibujo del INA" style="width: 80%; height: auto;">
+      </div>
+
+      <div class="column">
+
+        <!-- Formulario para el diseño en la columna -->
+        <style>
+          .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: 20px;
+          }
+
+          .form-group {
+            margin-bottom: 15px;
+          }
+
+          .form-group label {
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+          }
+
+          .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+          .result {
+            margin-top: 15px;
+            font-size: 18px;
+          }
+        </style>
+
+        <div class="container">
+          <h1>Análisis</h1>
+          <div class="form-group">
+            <label for="VCCina">VCC (V):</label>
+            <input type="number" id="VCCina" placeholder="Ingrese el valor de VCC (V)">
+          </div>
+          <div class="form-group">
+            <label for="R1ina">R1 (kΩ):</label>
+            <input type="number" id="R1ina" placeholder="Ingrese el valor de R1 (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="R2ina">R2 (kΩ):</label>
+            <input type="number" id="R2ina" placeholder="Ingrese el valor de R2 (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="R3ina">R3 (kΩ):</label>
+            <input type="number" id="R3ina" placeholder="AIngrese el valor de R3 (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="R4ina">R4 (kΩ):</label>
+            <input type="number" id="R4ina" placeholder="Ingrese el valor de R4 (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="RAina">RA (k):</label>
+            <input type="number" id="RAina" placeholder="Ingrese el valor de RA (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="RBina">RB (kΩ):</label>
+            <input type="number" id="RBina" placeholder="Ingrese el valor de RB (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="RCina">RC (kΩ):</label>
+            <input type="number" id="RCina" placeholder="Ingrese el valor de RC (kΩ)">
+          </div>
+          <div class="form-group">
+            <label for="RGina">RG (kΩ):</label>
+            <input type="number" id="RGina" placeholder="Ingrese el valor de RG (kΩ)">
+          </div>
+
+          <div class="form-group">
+            <button onclick="calcularina()">Calcular</button>
+          </div>
+          <div class="result" id="result"></div>
+        </div>
+
+
+        <div class="output-box">
+          <p id="resultados1ina">Ganancia: --</p>
+        </div>
+        <div class="output-box">
+          <p id="resultados2ina">Vin+ (V): --</p>
+        </div>
+        <div class="output-box">
+          <p id="resultados3ina">Vin- (V): --</p>
+        </div>
+        <div class="output-box">
+          <p id="resultados4ina">Ventrada (V): --</p>
+        </div>
+        <div class="output-box">
+          <p id="resultados5ina">Vout (V): --</p>
+        </div>
+        <div class="output-box">
+          <p id="resultados6ina">IR3 (mA): --</p>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div id="Salida-Push-Pull" class="section-content">
+    <h2>7.3 Configuración interna: salida push-pull del amplificador operacional, OPAMP con salida riel a riel</h2>
+    <p>LM741 es un opamp con salida push pull.</p>
+
+    <img src="images/pushpull.png" alt="Dibujo del diodo" style="width: 50%; height: auto;">
+
+    <!-- Primera fila de columnas -->
+    <div class="row">
+      <div class="column">
+
+        <p> </p>
+        <!-- Imagen de la configuracion interna -->
+        <img src="images/configuracioninterna.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+
+
+        <style>
+          .file-download {
+            margin-top: 20px;
+            text-align: center;
+          }
+
+          .file-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .file-download a:hover {
+            background-color: #0056b3;
+          }
+        </style>
+      </div>
+
+      <div class="column">
+        <!-- Formulario para el analisis en la segunda columna -->
+
+        <img src="images/configuracioninterna2.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+
+      </div>
+      <div class="column">
+        <!-- Formulario para el diseño en la tercera columna -->
+        <p> </p>
+        <img src="images/configuracioninterna3.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+      </div>
+    </div>
+
+
+
+    <!-- Segunda fila de columnas -->
+    <div class="row">
+      <div class="column">
+
+        <p> </p>
+        <!-- Imagen de la configuracion interna -->
+        <img src="images/rielariel1.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+
+
+        <style>
+          .file-download {
+            margin-top: 20px;
+            text-align: center;
+          }
+
+          .file-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+          }
+
+          .file-download a:hover {
+            background-color: #0056b3;
+          }
+        </style>
+      </div>
+
+      <div class="column">
+        <img src="images/rielariel2.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="Opamp-modo-no-lineal" class="section-content">
+    <h2>7.4 Configuraciones circuitales típicas con
+      OPAMP en modo no lineal</h2>
+    <p>Contenido sobre la introducción al curso.</p>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection('Comparador')">7.4.1 Comparador</a></li>
+        <li><a href="#" onclick="showSection('Disparador Schmitt')">7.4.2 Disparador Schmitt</a></li>
+        <li><a href="#" onclick="showSection('Disparador Schmitt no inversor')">7.4.3 Disparador Schmitt no
+            inversor</a>
+        </li>
+        <li><a href="#" onclick="showSection('Generador de Onda cuadrada')">7.4.4 Generador de onda cuadrada</a></li>
+        <li><a href="#" onclick="showSection('Generador de Onda cuadrada con fuente asimétrica')">7.4.5 Generador de
+            onda cuadrada con fuente asimétrica</a></li>
+        <li><a href="#" onclick="showSection('Generador de Onda PWM')">7.4.6 Generador de Onda PWM</a></li>
+        <li><a href="#" onclick="showSection('Generador de Onda triangular')">7.4.7 Generador de Onda Triangular</a>
+        </li>
+        <li><a href="#" onclick="showSection('Derivador')">7.4.8 Derivador</a></li>
+        <li><a href="#" onclick="showSection('Integrador')">7.4.9 Integrador</a></li>
+        <li><a href="#" onclick="showSection('Rectificador')">7.4.10 Amplificador Rectificador</a></li>
+
+      </ul>
+    </nav>
+
+  </div>
+
+
+
+
+
+
+  <div id="Generador de Onda PWM" class="section-content">
+    <h2>7.4.6 Generador de Onda PWM</h2>
+    <p>Contenido sobre la introducción al curso.</p>
+    <!-- Imagen del recortador de onda -->
+
+
+    <!-- Primera fila de columnas -->
+    <div class="row">
+      <div class="column">
+        <h2>Generador de Onda PWM con Potenciómetro</h2>
+        <p> </p>
+        <!-- Imagen del recortador de onda -->
+        <img src="images/pwm1.png" alt="Dibujo del pwm" style="max-width: 100%; height: auto;">
+
+      </div>
+      <div class="column">
+        <h2>Circuito Interno</h2>
+        <p>Texto o contenido de la segunda columna.</p>
+        <img src="images/opampoc2.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+      </div>
+      <div class="column">
+        <h2>Slew rate</h2>
+        <p>Texto o contenido de la tercera columna.</p>
+      </div>
+    </div>
+
+
+    <!-- Segunda fila de columnas -->
+    <div class="row">
+      <div class="column">
+        <h2>Generador de Onda PWM con LDR</h2>
+        <p> </p>
+        <!-- Imagen del recortador de onda -->
+        <img src="images/pwm2.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+
+      </div>
+      <div class="column">
+        <h2>Generador de Onda PWM con LDR</h2>
+        <p> </p>
+        <img src="images/pwmLDRgif.gif" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+      </div>
+
+    </div>
+
+    <!-- tercera fila de columnas -->
+    <div class="row">
+      <div class="column">
+        <h2>Generador de Onda PWM con Termistor NTC</h2>
+        <p> </p>
+        <!-- Imagen del recortador de onda -->
+        <img src="images/pwm3.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+
+      </div>
+      <div class="column">
+        <h2>CGenerador de Onda PWM con Termistor NTC</h2>
+        <p> </p>
+        <img src="images/pwmNTCgif.gif" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+      </div>
+      <div class="column">
+        <h2>Simulación con Proteus</h2>
+        <p> </p>
+        <img src="images/MonitoreoTemperatura.gif" alt="GIF del diodo" class="gif-dibujo" ;
+          style="display: block; margin: 0 auto; width: 100%; height: auto;">
+      </div>
+    </div>
+
+
+    <!-- Cuarta fila de columnas -->
+    <div class="row">
+      <div class="column">
+        <h2>Generador de Onda PWM con Sensor LM35</h2>
+        <p> Dado el siguiente circuito, determinar el rango de temperatura en el cual encenderá cada LED</p>
+        <img src="images/pwm4.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+      </div>
+
+      <div class="column">
+        <h2>CGenerador de Onda PWM con Sensor LM35</h2>
+        <p> </p>
+        <img src="images/pwmconLM35gif.gif" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+      </div>
+      <div class="column">
+        <h2>Simulación con Proteus</h2>
+        <p> </p>
+        <img src="images/MonitoreoTemperatura.gif" alt="GIF del diodo" class="gif-dibujo" ;
+          style="display: block; margin: 0 auto; width: 100%; height: auto;">
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- Quintaa fila de columnas -->
+    <div class="row">
+      <div class="column">
+        <h2>Generador de Onda PWM con DAC</h2>
+        <p> Dado el siguiente circuito, determinar el rango de temperatura en el cual encenderá cada LED</p>
+        <img src="images/pwm5.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+      </div>
+
+      <div class="column">
+        <h2>Generador de Onda PWM con DAC</h2>
+        <p> </p>
+        <img src="images/pwmdacgif.gif" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+      </div>
+      <div class="column">
+        <h2>Simulación con Proteus</h2>
+        <p> </p>
+        <img src="images/MonitoreoTemperatura.gif" alt="GIF del diodo" class="gif-dibujo" ;
+          style="display: block; margin: 0 auto; width: 100%; height: auto;">
+
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="Open-Collector" class="section-content">
+    <h2>7.5 Opamp con salida colector abierto</h2>
+    <p>Contenido sobre la introducción al curso.</p>
+    <!-- Imagen del recortador de onda -->
+
+
+
+    <!-- Primera fila de columnas -->
+    <div class="row">
+      <div class="column">
+        <h2>Opamp Open Collector</h2>
+        <p> </p>
+        <!-- Imagen del recortador de onda -->
+        <img src="images/opampoc1.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+
+      </div>
+      <div class="column">
+        <h2>Circuito Interno</h2>
+        <p>Texto o contenido de la segunda columna.</p>
+        <img src="images/opampoc2.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+      </div>
+      <div class="column">
+        <h2>Slew rate</h2>
+        <p>Texto o contenido de la tercera columna.</p>
+      </div>
+    </div>
+
+
+    <!-- Segunda fila de columnas -->
+    <div class="row">
+      <div class="column">
+        <h2>Opamp Open Collector</h2>
+        <p> </p>
+        <!-- Imagen del recortador de onda -->
+        <img src="images/opampoc3.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+
+      </div>
+      <div class="column">
+        <h2>And Wired</h2>
+        <p>Implementación del Comparador de Ventana.</p>
+        <img src="images/opampoc4.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+      </div>
+
+    </div>
+
+    <!-- tercera fila de columnas -->
+    <div class="row">
+      <div class="column">
+        <h2>Ejercicio de Diseño</h2>
+        <p> </p>
+        <!-- Imagen del recortador de onda -->
+        <img src="images/opampoc6.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+
+      </div>
+      <div class="column">
+        <h2>Circuito Monitoreo de Temperatura</h2>
+        <p> </p>
+        <img src="images/opampoc5.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+      </div>
+      <div class="column">
+        <h2>Simulación con Proteus</h2>
+        <p> </p>
+        <img src="images/MonitoreoTemperatura.gif" alt="GIF del diodo" class="gif-dibujo" ;
+          style="display: block; margin: 0 auto; width: 100%; height: auto;">
+
+
+      </div>
+    </div>
+
+
+    <!-- Cuarta fila de columnas -->
+    <div class="row">
+      <div class="column">
+        <h2>Ejercicio de Análisis</h2>
+        <p> Dado el siguiente circuito, determinar el rango de temperatura en el cual encenderá cada LED</p>
+
+
+      </div>
+      <div class="column">
+        <h2>Circuito Monitoreo de Temperatura</h2>
+        <p> </p>
+        <img src="images/opampoc7.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+      </div>
+      <div class="column">
+        <h2>Simulación con Proteus</h2>
+        <p> </p>
+        <img src="images/MonitoreoTemperatura.gif" alt="GIF del diodo" class="gif-dibujo" ;
+          style="display: block; margin: 0 auto; width: 100%; height: auto;">
+
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+
+  <div id="Especificaciones" class="section-content">
+    <h2>7.6 Especificaciones de los Opamps</h2>
+    <p>Contenido sobre la introducción al curso.</p>
+    <img src="images/especificaciones0.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+
+
+
+    <!-- Línea Horizontal -->
+    <hr class="divider">
+
+    <!-- Primera fila de columnas -->
+    <div class="row">
+      <div class="column">
+        <h2>Corriente de polarización</h2>
+        <p> </p>
+        <!-- Imagen del recortador de onda -->
+        <img src="images/especificaciones1.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+
+      </div>
+      <div class="column">
+        <h2>Ganancia en Lazo abierto (Open Loop)</h2>
+        <p>Texto o contenido de la segunda columna.</p>
+        <img src="images/especificaciones3.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+      </div>
+      <div class="column">
+        <h2>Slew rate</h2>
+        <p>Texto o contenido de la tercera columna.</p>
+      </div>
+    </div>
+
+    <!-- Línea Horizontal -->
+    <hr class="divider">
+
+
+    <!-- Segunda fila de columnas -->
+    <div class="row">
+      <div class="column">
+        <h2>Slew rate</h2>
+        <p> </p>
+        <!-- Imagen del recortador de onda -->
+        <img src="images/especificaciones2.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+
+      </div>
+      <div class="column">
+        <h2>Producto Ganancia por Ancho de Banda</h2>
+        <p>Texto o contenido de la segunda columna.</p>
+        <img src="images/especificaciones4.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+      </div>
+      <div class="column">
+        <h2>Slew rate</h2>
+        <p>Texto o contenido de la tercera columna.</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <div id="Filtros" class="section-content">
+    <h2>7.7 Filtros</h2>
+    <p> Un filtro es una red eléctrica que altera la amplitud o fase de una señal con respecto  a la frecuencia. Idealmente un filtro no añadirá nuevas componentes frecuenciales, si no que modificará las amplitudes o fases realtivas de las existentes. Un filtro encuentran aplicación principalmente en telecomunicaciones (TV, radio, modem, etc) e instrumentación electrónica (sistema de adquisición de datos, procesamiento de señales, etc).
+    </p>
+
+    <p>Revisa la siguiente página: <a href="https://webench.ti.com/filter-design-tool/"
+      target="_blank">Diseño de Filtros Analógicos TEXAS INSTRUMENTS</a>.</p>
+
+
+  </div>
+
+
+
+
+  <div id="respuesta-en-baja-frecuencia" class="section-content">
+    <h2>6.2 Respuesta en baja frecuencia de un amplificador con MOSFET de enriquecimiento en configuración surtidor
+      común</h2>
+    <p>Contenido sobre el diodo ideal.</p>
+
+    <!-- Texto adicional -->
+    <p>Un diodo es un dispositivo semiconductor de dos terminales: ánodo y cátodo, que permite el paso de la corriente
+      en una única dirección, de ánodo a cátodo.</p>
+
+    <!-- Imagen del diodo -->
+    <img src="images/diodo1.jpg" alt="Dibujo del diodo" style="width: 200; height: 100;">
+
+
+
+    <!-- Formulario para calcular el voltaje máximo -->
+    <div class="input-box">
+      <label for="VDD">VDD (V):</label>
+      <input type="number" id="VDD" placeholder="Ingrese el valor de VDD (V)" />
+    </div>
+
+
+    <div class="input-box">
+      <label for="R1">R1 (kΩ):</label>
+      <input type="number" id="R1" placeholder="Ingrese el valor de R1 (kΩ)" />
+    </div>
+
+    <div class="input-box">
+      <label for="R2">R2 (kΩ):</label>
+      <input type="number" id="R2" placeholder="Ingrese el valor de R2 (kΩ)" />
+    </div>
+
+    <div class="input-box">
+      <label for="RD">RD (kΩ):</label>
+      <input type="number" id="RD" placeholder="Ingrese el valor de RD (kΩ)" />
+    </div>
+
+    <div class="input-box">
+      <label for="VT">VT (V):</label>
+      <input type="number" id="VT" placeholder="Ingrese el valor de VT (V)" />
+    </div>
+
+
+    <div class="input-box">
+      <label for="k">k:</label>
+      <input type="number" id="k" placeholder="Ingrese el valor de k (mA/(V*V))" />
+    </div>
+
+
+
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div class="output-box">
+      <p id="resultado1">VGS: --</p>
+    </div>
+
+    <div class="output-box">
+      <p id="resultado2">ID: --</p>
+    </div>
+
+
+    <div class="output-box">
+      <p id="resultado3">VDS: --</p>
+    </div>
+
+    <div class="output-box">
+      <p id="resultado4">gm: --</p>
+    </div>
+
+    <div class="output-box">
+      <p id="resultado5">rd: --</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div id="Respuesta-en-alta-frecuencia" class="section-content">
+    <h2>6.3 Respuesta en alta frecuencia de un amplificador con MOSFET de enriquecimiento en configuración surtidor
+      común</h2>
+    <p>Contenido sobre el diodo ideal.</p>
+
+    <!-- Texto adicional -->
+    <p>Un diodo es un dispositivo semiconductor de dos terminales: ánodo y cátodo, que permite el paso de la corriente
+      en una única dirección, de ánodo a cátodo.</p>
+
+    <!-- Imagen del diodo -->
+    <img src="images/diodo1.jpg" alt="Dibujo del diodo" style="width: 200; height: 100;">
+  </div>
+
+
+
+
+
+
+
+
+
+  <script>
+
+
+    function showSection(sectionId) {
+      var sections = document.querySelectorAll('.section-content');
+      sections.forEach(function (section) {
+        section.style.display = 'none';
+      });
+
+      var sectionToShow = document.getElementById(sectionId);
+      if (sectionToShow) {
+        sectionToShow.style.display = 'block';
+      }
+    }
+
+    function calcularina() {
+      var VCCina = document.getElementById('VCCina').value;
+      var R1ina = document.getElementById('R1ina').value;
+      var R2ina = document.getElementById('R2ina').value;
+      var R3ina = document.getElementById('R3ina').value;
+      var R4ina = document.getElementById('R4ina').value;
+      var RAina = document.getElementById('RAina').value;
+      var RBina = document.getElementById('RBina').value;
+      var RCina = document.getElementById('RCina').value;
+      var RGina = document.getElementById('RGina').value;
+
+
+      // Verifica si los valores ingresados son válidos
+      if (VCCina && R1ina && R2ina && R3ina && R4ina && RGina) {
+        // Convierte las entradas a números
+        VCCina = parseFloat(VCCina);
+        R1ina = parseFloat(R1ina);
+        R2ina = parseFloat(R2ina);
+        R3ina = parseFloat(R3ina);
+        R4ina = parseFloat(R4ina);
+        RAina = parseFloat(RAina);
+        RBina = parseFloat(RBina);
+        RCina = parseFloat(RCina);
+        RGina = parseFloat(RGina);
+
+
+        // Calcula 
+        var Gina = (RCina / RBina) * (1 + 2 * RAina / RGina);
+        var Vinmas = VCCina * R3ina / (R1ina + R3ina);
+        var Vinmenos = VCCina * R4ina / (R4ina + R2ina);
+        var Ventradaina = Vinmas - Vinmenos;
+        var Voutina = Ventradaina * Gina;
+        var IR3ina = VCCina / (R1ina + R3ina);
+
+        // Muestra los resultados
+        document.getElementById('resultados1ina').innerText = "Ganancia: " + Gina.toFixed(5) + " ";
+        document.getElementById('resultados2ina').innerText = "Vin+: " + Vinmas.toFixed(5) + " V";
+        document.getElementById('resultados3ina').innerText = "Vin-: " + Vinmenos.toFixed(5) + " V";
+        document.getElementById('resultados4ina').innerText = "Ventrada: " + Ventradaina.toFixed(5) + " V";
+        document.getElementById('resultados5ina').innerText = "Vout: " + Voutina.toFixed(2) + " V";
+        document.getElementById('resultados6ina').innerText = "IR3: " + IR3ina.toFixed(2) + " mA";
+
+      } else {
+        document.getElementById('resultado1ina').innerText = "Por favor, ingrese valores válidos para todos los campos.";
+      }
+    }
+
+
+
+    function calcularsecaa() {
+
+      // Obtener los valores de entrada
+      var VCCsecaa = parseFloat(document.getElementById('VCCsecaa').value);
+      var R1secaa = parseFloat(document.getElementById('R1secaa').value);
+      var R2secaa = parseFloat(document.getElementById('R2secaa').value);
+      var RFsecaa = parseFloat(document.getElementById('RFsecaa').value);
+      var RGsecaa = parseFloat(document.getElementById('RGsecaa').value);
+
+
+      // Verifica si los valores ingresados son válidos
+      if (!isNaN(VCCsecaa) && !isNaN(R1secaa) && !isNaN(R2secaa) && !isNaN(RFsecaa) && !isNaN(RGsecaa)) {
+
+        var resultadosecaam = (1 + RFsecaa / RGsecaa) * (R1secaa / (R1secaa + R2secaa));
+        var resultadosecaab = (1 + RFsecaa / RGsecaa) * VCCsecaa * (R2secaa / (R1secaa + R2secaa));
+
+
+
+        document.getElementById('resultadosecaam').innerText = "m: " + resultadosecaam.toFixed(2) + " ";
+        document.getElementById('resultadosecaab').innerText = "b: " + resultadosecaab.toFixed(2) + " ";
+
+      } else {
+        document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos";
+      }
+    }
+
+
+    function calcularsecba() {
+
+// Obtener los valores de entrada
+var VCCsecba = parseFloat(document.getElementById('VCCsecba').value);
+var R1secba = parseFloat(document.getElementById('R1secba').value);
+var R2secba = parseFloat(document.getElementById('R2secba').value);
+var RFsecba = parseFloat(document.getElementById('RFsecba').value);
+
+// Verifica si los valores ingresados son válidos
+if (!isNaN(VCCsecba) && !isNaN(R1secba) && !isNaN(R2secba) && !isNaN(RFsecba)) {
+
+  var RTHsecba=R1secba*R2secba/(R1secba+R2secba);
+
+  var msecba = 1+RFsecba/RTHsecba;
+  var bsecba=VCCsecba*R2secba*RFsecba/((R1secba+R2secba)*RTHsecba);
+
+  
+  document.getElementById('resultadosecbam').innerText = "m: " + msecba.toFixed(2) + " ";
+  document.getElementById('resultadosecbab').innerText = "b: " + bsecba.toFixed(2) + " ";
+
+} else {
+  document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos";
+}
+}
+
+function calcularsecca() {
+
+// Obtener los valores de entrada
+var VCCsecca = parseFloat(document.getElementById('VCCsecca').value);
+var R1secca = parseFloat(document.getElementById('R1secca').value);
+var R2secca = parseFloat(document.getElementById('R2secca').value);
+var RFsecca = parseFloat(document.getElementById('RFsecca').value);
+var RGsecca = parseFloat(document.getElementById('RGsecca').value);
+
+// Verifica si los valores ingresados son válidos
+if (!isNaN(VCCsecca) && !isNaN(R1secca) && !isNaN(R2secca) && !isNaN(RFsecca) && !isNaN(RGsecca)) {
+
+  var msecca=-RFsecca/RGsecca;
+  var bsecca=VCCsecca*R2secca*(RFsecca+RGsecca)/((R1secca+R2secca)*RGsecca);
+
+  
+  document.getElementById('resultadoseccam').innerText = "m: " + msecca.toFixed(2) + " ";
+  document.getElementById('resultadoseccab').innerText = "b: " + bsecca.toFixed(2) + " ";
+
+} else {
+  document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos";
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function calcularsecbd() {
+
+      // Obtener los valores de entrada
+      var VCCsecbd = parseFloat(document.getElementById('VCCsecbd').value);
+      var R1secbd = parseFloat(document.getElementById('R1secbd').value);
+      var msecbd = parseFloat(document.getElementById('msecbd').value);
+      var bsecbd = parseFloat(document.getElementById('bsecbd').value);
+
+      // Verifica si los valores ingresados son válidos
+      if (!isNaN(VCCsecbd) && !isNaN(R1secbd) && !isNaN(msecbd) && !isNaN(bsecbd)) {
+
+        var RFsecbd = (bsecbd * R1secbd / VCCsecbd);
+        var RTHsecbd=RFsecbd/(msecbd-1);
+
+        var R2secbd = (1 / (1/RTHsecbd-1/R1secbd));
+
+
+
+        document.getElementById('resultadosecbdRF').innerText = "RF (kΩ): " + RFsecbd.toFixed(2) + " ";
+        document.getElementById('resultadosecbdR2').innerText = "R2 (kΩ): " + R2secbd.toFixed(2) + " ";
+
+      } else {
+        document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos";
+      }
+    }
+
+
+    function calcularseccd() {
+
+// Obtener los valores de entrada
+var VCCseccd = parseFloat(document.getElementById('VCCseccd').value);
+var mseccd = parseFloat(document.getElementById('mseccd').value);
+var bseccd = parseFloat(document.getElementById('bseccd').value);
+var RGseccd = parseFloat(document.getElementById('RGseccd').value);
+var R2seccd = parseFloat(document.getElementById('R2seccd').value);
+
+// Verifica si los valores ingresados son válidos
+if (!isNaN(VCCseccd) && !isNaN(RGseccd) && !isNaN(mseccd) && !isNaN(bseccd) && !isNaN(R2seccd)) {
+
+  var RFseccd = -mseccd*RGseccd;
+  var R1seccd =VCCseccd*R2seccd*(1+RFseccd/RGseccd)/bseccd-R2seccd;
+
+
+
+  document.getElementById('resultadoseccdRF').innerText = "RF (kΩ): " + RFseccd.toFixed(2) + " ";
+  document.getElementById('resultadoseccdR1').innerText = "R1 (kΩ): " + R1seccd.toFixed(2) + " ";
+
+} else {
+  document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos";
+}
+}
+
+
+function calcularsecda() {
+
+// Obtener los valores de entrada
+var VCCsecda = parseFloat(document.getElementById('VCCsecda').value);
+var R1secda = parseFloat(document.getElementById('R1secda').value);
+var R2secda = parseFloat(document.getElementById('R2secda').value);
+var RFsecda = parseFloat(document.getElementById('RFsecda').value);
+
+
+// Verifica si los valores ingresados son válidos
+if (!isNaN(VCCsecda) && !isNaN(R1secda) && !isNaN(R2secda) && !isNaN(RFsecda)) {
+
+  var msecda=-RFsecda/R1secda;
+  var bsecda=-VCCsecda*RFsecda/R2secda;
+
+  
+  document.getElementById('resultadosecdam').innerText = "m: " + msecda.toFixed(2) + " ";
+  document.getElementById('resultadosecdab').innerText = "b: " + bsecda.toFixed(2) + " ";
+
+} else {
+  document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos";
+}
+}
+
+function calcularsecdd() {
+
+// Obtener los valores de entrada
+var VCCsecdd = parseFloat(document.getElementById('VCCsecdd').value);
+var msecdd = parseFloat(document.getElementById('msecdd').value);
+var bsecdd = parseFloat(document.getElementById('bsecdd').value);
+var R1secdd = parseFloat(document.getElementById('R1secdd').value);
+
+
+// Verifica si los valores ingresados son válidos
+if (!isNaN(VCCsecdd) && !isNaN(R1secdd) && !isNaN(msecdd) && !isNaN(bsecdd)) {
+
+  var RFsecdd = -msecdd*R1secdd;
+  var R2secdd =-VCCsecdd*RFsecdd/bsecdd;
+
+
+
+  document.getElementById('resultadosecddRF').innerText = "RF (kΩ): " + RFsecdd.toFixed(2) + " ";
+  document.getElementById('resultadosecddR2').innerText = "R2 (kΩ): " + R2secdd.toFixed(2) + " ";
+
+} else {
+  document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos";
+}
+}
+
+
+
+
+
+
+
+    function calcularse1() {
+
+      // Obtener los valores de entrada
+      var VCC = parseFloat(document.getElementById('VCC').value);
+      var m = parseFloat(document.getElementById('m').value);
+      var b = parseFloat(document.getElementById('b').value);
+      var R2 = parseFloat(document.getElementById('R2').value);
+      var RG = parseFloat(document.getElementById('RG').value);
+
+
+      // Verifica si los valores ingresados son válidos
+      if (!isNaN(VCC) && !isNaN(m) && !isNaN(b) && !isNaN(R2) && !isNaN(RG)) {
+
+        var R1 = (m * R2 * VCC) / (b);
+        var RF = (2 * (R1 + R2) / R1 - 1) * RG;
+
+
+
+        document.getElementById('resultadose1').innerText = "R1: " + R1.toFixed(2) + " kΩ";
+        document.getElementById('resultadose2').innerText = "RF: " + RF.toFixed(2) + " kΩ";
+
+      } else {
+        document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos";
+      }
+    }
+
+
+
+
+
+
+    // Mostrar la primera sección por defecto
+    showSection('introduccion');
+
+  </script>
+</body>
+
+</html>

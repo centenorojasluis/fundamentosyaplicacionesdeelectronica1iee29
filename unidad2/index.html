@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 2: Transistores Bipolares</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .section-content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Unidad 2: Transistores Bipolares</h1>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('Principio')"> 2.1 Principio y regiones de funcionamiento </a></li>
+            <li><a href="#" onclick="showSection('Curvas')"> 2.2 Curvas características</a></li>
+            <li><a href="#" onclick="showSection('Conmutacion')"> 2.3 El transistor en conmutación (región de corte y
+                    saturación). </a></li>
+            <li><a href="#" onclick="showSection('Polarizacion')"> 2.4 Circuitos de polarización (región activa
+                    directa),
+                    criterio de estabilidad</a></li>
+            <li><a href="#" onclick="showSection('Especificaciones')">2.5 Especificaciones técnicas de transistores
+                    bipolares</a></li>
+            <li><a href="#" onclick="showSection('Fototransistor')"> 2.6 El fototransistor: empleo como detector,
+                    aislador</a></li>
+            <li><a href="#" onclick="showSection('Optoacoplador')"> 2.7 El optoacoplador </a></li>
+            <li><a href="#" onclick="showSection('Rele')"> 2.8 El relé </a></li>
+            <li><a href="#" onclick="showSection('Fuente-Lineal')"> 2.9 Fuente de alimentación regulada con circuito
+                    integrado y transistor para aumentar la corriente de salida</a></li>
+            <li><a href="#" onclick="showSection('Fuente-conmutada')"> 2.10 Principio Básico de funcionamiento del
+                    regulador de voltaje conmutado. Regulador de voltaje conmutado con circuito integrado</a></li>
+            <li><a href="#" onclick="showSection('Comparacion')"> 2.11 Comparación de fuente de alimentación lineal y
+                    conmutada
+
+                </a></li>
+
+
+
+            <!-- Agrega otros enlaces aquí -->
+        </ul>
+    </nav>
+
+    <div id="Principio" class="section-content">
+        <h2>2.1 Principio de funcionamiento</h2>
+        <p>Construcción del BJT</p>
+
+        <div style="text-align: center;">
+            <img src="images/bjt1.png" alt="Descripción de la imagen" style="display: block; margin: 0 auto;">
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/w14cvydBC8g?si=UEAWIuYIXfgs5tT5"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                style="display: block; margin: 20px auto;">
+            </iframe>
+
+
+            <img src="images/npn.png" alt="Descripción de la imagen" class="imagen-izquierda">
+        </div>
+    </div>
+
+
+    <div id="Curvas" class="section-content">
+        <h2>2.2 Curvas características</h2>
+        <p>Curvas del BJT</p>
+
+        <img src="images/curvasbjt.png" alt="Descripción de la imagen" class="imagen-izquierda">
+
+
+        <img src="images/regionesbjt.png" alt="Descripción de la imagen" class="imagen-izquierda">
+        <p> </p>
+        <p>Circuito Equivalente del BJT NPN, según región</p>
+        <img src="images/circuitoequivalenteregion.png" alt="Descripción de la imagen" class="imagen-izquierda">
+    </div>
+
+    <div id="Conmutacion" class="section-content">
+        <h2>2.3 El transistor en conmutación (región de corte y saturación). </h2>
+        <p>Ejercicio</p>
+        <img src="images/ejerciciobjt1.png" alt="Descripción de la imagen" class="imagen-izquierda">
+        <img src="images/ejerciciobjt2.png" alt="Descripción de la imagen" class="imagen-izquierda">
+        <img src="images/ejerciciobjt3.png" alt="Descripción de la imagen" class="imagen-izquierda">
+        <img src="images/ejerciciobjt4.png" alt="Descripción de la imagen" class="imagen-izquierda">
+
+
+        <p>Ejercicio: </p>
+        <p>Ejercicio: Diseñar un circuito, para encender/apagar un LED con un SW. El LED debe encender con 20mA. Se sabe
+            que VLED=2.2V@20mA. La fuente es de 5V. </p>
+
+    </div>
+
+
+    <div id="Polarizacion" class="section-content">
+        <h2>2.4 Polarización del BJT</h2>
+        <p>Circuito de Polarizacion del BJT</p>
+        <img src="images/polarizacion bjt.png" alt="Descripción de la imagen" class="imagen-izquierda">
+        <p>Circuito Equivalente del BJT</p>
+        <img src="images/equivalentethevenin.png" alt="Descripción de la imagen" class="imagen-izquierda">
+    </div>
+
+
+    <div id="Especificaciones" class="section-content">
+        <h2>2.5 Especificaciones del Transistor BJT</h2>
+        <p>Revisar la hoja de datos del transistor 2N3904</p>
+    </div>
+
+    <div id="Fototransistor" class="section-content">
+        <h2>2.6 El fototransistor: empleo como detector, aislador</h2>
+        <p>El fototransistor</p>
+
+        <a href="https://www.digikey.com/es/articles/how-to-use-photodiodes-and-phototransistors-most-effectively"
+            target="_blank">Digikey: Cómo utilizar fotodiodos y fototransistores con mayor eficacia</a>
+
+        <p>Fotodiodo</p>
+        <img src="images/fotodiodo.png" alt="Descripción de la imagen" class="imagen-izquierda">
+
+
+        <p>Fototransistor</p>
+        <img src="images/fototransistor1.png" alt="Descripción de la imagen" class="imagen-izquierda">
+
+        <p>Fototransistor</p>
+        <img src="images/fototransistor2.png" alt="Descripción de la imagen" class="imagen-izquierda">
+
+
+
+
+
+    </div>
+
+    <div id="Optoacoplador" class="section-content">
+        <h2>2.7 Funcionamiento</h2>
+        <p> </p>
+
+        
+        <img src="images/Optoacoplador1.png" alt="Dibujo del diodo" style="max-width: 50%; height: auto;">
+        <div class="container">
+            <h1> </h1>
+            <div class="file-download">
+                <a href="images/1IEE29 Optoacoplador funcionamiento.pdsprj" download>Descargar Archivo de Proteus</a>
+            </div>
+        </div>
+
+    <hr>
+
+
+        <img src="images/optoacoplador con motor.png" alt="Dibujo del diodo" style="max-width: 50%; height: auto;">
+        <div class="container">
+            <h1> </h1>
+            <div class="file-download">
+                <a href="images/1IEE29 Optoacoplador BJT.pdsprj" download>Descargar Archivo de Proteus</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2> Aplicaciones </h2>
+        <h2> Detector de Cruce por Cero </h2>
+        
+        <img src="images/detector de cruce por cero con opto.png" alt="Dibujo del diodo" style="max-width: 60%; height: auto;">
+        <div class="container">
+            <h1> </h1>
+            <div class="file-download">
+                <a href="images/1IEE29 Optoacoplador cruce.pdsprj" download>Descargar Archivo de Proteus</a>
+            </div>
+        </div>
+
+
+<hr>
+
+        <h2> Medición de velocidad de motor con Photointerruptor </h2>
+
+        <img src="images/Photointerruptor velocidad.png" alt="Dibujo del diodo" style="max-width: 60%; height: auto;">
+
+
+    </div>
+
+    <div id="Rele" class="section-content">
+        <h2>2.8 Relé</h2>
+        <p>Funcionamiento del Relé</p>
+        <img src="images/Relay1.gif" alt="Dibujo del diodo" style="max-width: 30%; height: auto;">
+
+        <img src="images/bjtrelay1.png" alt="Dibujo del diodo" style="max-width: 30%; height: auto;">
+        <img src="images/bjtrelay2.png" alt="Dibujo del diodo" style="max-width: 30%; height: auto;">
+        <img src="images/datasheetrelay.png" alt="Dibujo del diodo" style="max-width: 30%; height: auto;">
+
+
+
+        <div class="container">
+            <h1> </h1>
+            <div class="file-download">
+                <a href="images/1IEE29 Rele y BJT.pdsprj" download>Descargar Archivo de Proteus</a>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div id="Fuente-Lineal" class="section-content">
+        <h2>2.9 Fuente de alimentación regulada con circuito integrado y transistor para aumentar la corriente de salida
+        </h2>
+        <p> </p>
+
+
+        <div class="row">
+            <div class="column">
+
+               
+                <img src="images/LM78XXconBJT.png" alt="Descripción de la imagen" style="max-width: 70%; height: auto;">
+
+                <p> Gráficos de TIP42</p>
+                <img src="images/tip42datasheet.png" alt="Descripción de la imagen" style="max-width: 80%; height: auto;">
+
+                
+
+                <style>
+                    .file-download {
+                        margin-top: 20px;
+                        text-align: center;
+                    }
+
+                    .file-download a {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        color: white;
+                        background-color: #007bff;
+                        text-decoration: none;
+                        border-radius: 5px;
+                    }
+
+                    .file-download a:hover {
+                        background-color: #0056b3;
+                    }
+                </style>
+
+
+
+                <div class="container">
+                    <h1> </h1>
+                    <div class="file-download">
+                        <a href="images/1IEE29 Fuente regulada con Transistor BJT.pdsprj" download>Descargar Archivo de Proteus</a>
+                    </div>
+                </div>
+
+                <p>Revisa la siguiente página para obtener información del TIP42: <a href="https://www.mouser.pe/datasheet/2/258/TIP42_2cTIP42A_2cTIP42B_2cTIP42C_TO_220_-3366409.pdf"
+                    target="_blank">TIP42 Hoja de datos</a>.</p>
+
+
+            </div>
+            <div class="column">
+                <!-- Formulario para el diseño en la tercera columna -->
+                <style>
+                    .container {
+                        background: #fff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        width: 300px;
+                        margin-bottom: 20px;
+                    }
+
+                    .form-group {
+                        margin-bottom: 15px;
+                    }
+
+                    .form-group label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    .form-group input {
+                        width: 100%;
+                        padding: 8px;
+                        box-sizing: border-box;
+                    }
+
+                    .form-group button {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+
+                    .result {
+                        margin-top: 15px;
+                        font-size: 18px;
+                    }
+                </style>
+
+
+
+
+
+                <div class="container">
+                    <h1>Diseño del Regulador con BJT para aumentar corriente de salida</h1>
+                    <div class="form-group">
+                        <label for="Ioutmax">Ioutmax (A):</label>
+                        <input type="number" id="Ioutmax" placeholder="Ingrese el valor de Ioutmax (A)">
+                    </div>
+                    <div class="form-group">
+                        <label for="Iregmax">Iregmax (A):</label>
+                        <input type="number" id="Iregmax"
+                            placeholder="Ingrese el valor de Iregmax (debe ser menor que 1A) (A)">
+                    </div>
+                    <div class="form-group">
+                        <label for="β"> β: </label>
+                        <input type="number" id="β" placeholder="Ingrese el valor de β ">
+                    </div>
+                    <div class="form-group">
+                        <label for="VEB"> VEB (V):</label>
+                        <input type="number" id="VEB" placeholder="Ingrese el valor de VEB (V)">
+                    </div>
+
+
+                    <div class="form-group">
+                        <button onclick="calcularR1()">Calcular</button>
+                    </div>
+                    <div class="result" id="result"></div>
+
+
+                </div>
+               
+                <div class="output-box">
+                    <p id="resultadoR1">R1: --</p>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="Fuente-conmutada" class="section-content">
+        <h2>2.10 Principio Básico de funcionamiento del regulador de voltaje conmutado. Regulador de voltaje conmutado
+            con circuito integrado</h2>
+        <p>Construcción del MOSFET</p>
+        <img src="images/fuenteconmutada1.png" alt="Descripción de la imagen" class="imagen-izquierda">
+
+        <img src="images/fuenteconmutada2.png" alt="Descripción de la imagen" class="imagen-izquierda">
+
+
+
+    </div>
+
+
+    <div id="Comparacion" class="section-content">
+        <h2>2.11 Comparación de fuente de alimentación lineal y conmutada</h2>
+        <p>Diferencia entre fuente lineal y fuente conmutada</p>
+        <img src="images/comparacion.png" alt="Descripción de la imagen" class="imagen-izquierda">
+        <img src="images/fuenteconmutada3.png" alt="Descripción de la imagen" class="imagen-izquierda">
+    </div>
+
+    <script>
+
+        function calcularR1() {
+
+            // Obtener los valores de entrada
+            var Ioutmax = parseFloat(document.getElementById('Ioutmax').value);
+            var Iregmax = parseFloat(document.getElementById('Iregmax').value);
+            var β = parseFloat(document.getElementById('β').value);
+            var VEB = parseFloat(document.getElementById('VEB').value);
+            
+
+            // Verifica si los valores ingresados son válidos
+            if (!isNaN(Ioutmax) && !isNaN(Iregmax) && !isNaN(β ) && !isNaN(VEB)) {
+
+                var R1 = (VEB) / (Iregmax- (Ioutmax-Iregmax)/β);
+                
+
+                document.getElementById('resultadoR1').innerText = "R1: " + R1.toFixed(2) + " Ω ";
+               
+
+            } else {
+                document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos";
+            }
+        }
+
+
+
+
+
+
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section-content');
+            sections.forEach(function (section) {
+                section.style.display = 'none';
+            });
+
+            var sectionToShow = document.getElementById(sectionId);
+            if (sectionToShow) {
+                sectionToShow.style.display = 'block';
+            }
+        }
+
+        // Mostrar la primera sección por defecto
+        showSection('Principio');
+    </script>
+
+</body>
+
+</html>

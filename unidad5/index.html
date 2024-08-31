@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 5: MOSFET</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .section-content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Unidad 5: MOSFET</h1>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('Principio')">5.1 Principio de funcionamiento del MOSFET de
+                    enriquecimiento</a></li>
+            <li><a href="#" onclick="showSection('Curvas')">5.2 Curvas características, ecuación de transferencia</a>
+            </li>
+            <li><a href="#" onclick="showSection('Polarizacion')">5.3 Circuitos de polarización con MOSFET, criterio de
+                    estabilidad</a></li>
+            <li><a href="#" onclick="showSection('Modelo')">5.4 Modelo de pequeña señal del MOSFET</a></li>
+            <li><a href="#" onclick="showSection('Amplificador')">5.5 Circuitos amplificadores de pequeña señal</a></li>
+            <li><a href="#" onclick="showSection('Interruptor')">5.6 MOSFET como interruptor</a></li>
+            <li><a href="#" onclick="showSection('Especificaciones')">5.7 Especificaciones técnicas de MOSFET</a></li>
+            <li><a href="#" onclick="showSection('PuenteH')">5.8 Puente H: configuración y principio de
+                    funcionamiento</a></li>
+            <li><a href="#" onclick="showSection('L298')">5.9 Tecnologias de implementación del puente H. Circuito
+                    práctico con L298 y TB12FNG</a></li>
+
+            <!-- Agrega otros enlaces aquí -->
+        </ul>
+    </nav>
+
+    <div id="Principio" class="section-content">
+        <h2>5.1 Principio de funcionamiento</h2>
+        <p>Construcción del MOSFET</p>
+
+        <iframe width="1536" height="864" src="https://miro.com/app/board/uXjVKNlDLr8=/?share_link_id=721634702104"
+            frameborder="0" allowfullscreen></iframe>
+
+    </div>
+
+    <div id="respuesta-en-baja-frecuencia" class="section-content">
+        <h2>6.2 Respuesta en baja frecuencia de un amplificador con MOSFET de enriquecimiento en configuración surtidor
+            común</h2>
+        <p>Contenido sobre el diodo ideal.</p>
+
+        <!-- Texto adicional -->
+        <p>Un diodo es un dispositivo semiconductor de dos terminales: ánodo y cátodo, que permite el paso de la
+            corriente en una única dirección, de ánodo a cátodo.</p>
+
+        <!-- Imagen del diodo -->
+        <img src="images/diodo1.jpg" alt="Dibujo del diodo" style="width: 200; height: 100;">
+
+
+
+        <!-- Formulario para calcular el voltaje máximo -->
+        <div class="input-box">
+            <label for="VDD">VDD (V):</label>
+            <input type="number" id="VDD" placeholder="Ingrese el valor de VDD (V)" />
+        </div>
+
+
+        <div class="input-box">
+            <label for="R1">R1 (kΩ):</label>
+            <input type="number" id="R1" placeholder="Ingrese el valor de R1 (kΩ)" />
+        </div>
+
+        <div class="input-box">
+            <label for="R2">R2 (kΩ):</label>
+            <input type="number" id="R2" placeholder="Ingrese el valor de R2 (kΩ)" />
+        </div>
+
+        <div class="input-box">
+            <label for="RD">RD (kΩ):</label>
+            <input type="number" id="RD" placeholder="Ingrese el valor de RD (kΩ)" />
+        </div>
+
+        <div class="input-box">
+            <label for="VT">VT (V):</label>
+            <input type="number" id="VT" placeholder="Ingrese el valor de VT (V)" />
+        </div>
+
+
+        <div class="input-box">
+            <label for="k">k:</label>
+            <input type="number" id="k" placeholder="Ingrese el valor de k (mA/(V*V))" />
+        </div>
+
+
+
+
+        <button onclick="calcular()">Calcular</button>
+
+        <div class="output-box">
+            <p id="resultado1">VGS: --</p>
+        </div>
+
+        <div class="output-box">
+            <p id="resultado2">ID: --</p>
+        </div>
+
+
+        <div class="output-box">
+            <p id="resultado3">VDS: --</p>
+        </div>
+
+        <div class="output-box">
+            <p id="resultado4">gm: --</p>
+        </div>
+
+        <div class="output-box">
+            <p id="resultado5">rd: --</p>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div id="Respuesta-en-alta-frecuencia" class="section-content">
+        <h2>6.3 Respuesta en alta frecuencia de un amplificador con MOSFET de enriquecimiento en configuración surtidor
+            común</h2>
+        <p>Contenido sobre el diodo ideal.</p>
+
+        <!-- Texto adicional -->
+        <p>Un diodo es un dispositivo semiconductor de dos terminales: ánodo y cátodo, que permite el paso de la
+            corriente en una única dirección, de ánodo a cátodo.</p>
+
+        <!-- Imagen del diodo -->
+        <img src="images/diodo1.jpg" alt="Dibujo del diodo" style="width: 200; height: 100;">
+    </div>
+
+
+
+
+    <script>
+
+
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section-content');
+            sections.forEach(function (section) {
+                section.style.display = 'none';
+            });
+
+            var sectionToShow = document.getElementById(sectionId);
+            if (sectionToShow) {
+                sectionToShow.style.display = 'block';
+            }
+        }
+
+        function calcular() {
+            var VDD = document.getElementById('VDD').value;
+            var R1 = document.getElementById('R1').value;
+            var R2 = document.getElementById('R2').value;
+            var RD = document.getElementById('RD').value;
+            var VT = document.getElementById('VT').value;
+            var k = document.getElementById('k').value;
+
+            // Verifica si los valores ingresados son válidos
+            if (VDD && R1 && R2 && RD && VT && k) {
+                // Convierte las entradas a números
+                VDD = parseFloat(VDD);
+                R1 = parseFloat(R1);
+                R2 = parseFloat(R2);
+                RD = parseFloat(RD);
+                VT = parseFloat(VT);
+                k = parseFloat(k);
+
+                // Calcula VGS, ID y VDS
+                var VGS = VDD * R2 / (R1 + R2);
+                var ID = k * (VGS - VT) * (VGS - VT);
+                var VDS = VDD - ID * RD;
+                var gm = 2 * k * (VGS - VT);
+                var rd = 100 / ID;
+
+                // Muestra los resultados
+                document.getElementById('resultado1').innerText = "VGS: " + VGS.toFixed(2) + " V";
+                document.getElementById('resultado2').innerText = "ID: " + (ID).toFixed(2) + " mA";
+                document.getElementById('resultado3').innerText = "VDS: " + VDS.toFixed(2) + " V";
+                document.getElementById('resultado4').innerText = "gm: " + gm.toFixed(2) + " mS";
+                document.getElementById('resultado5').innerText = "rd: " + rd.toFixed(2) + " kΩ";
+            } else {
+                document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos para todos los campos.";
+            }
+        }
+
+
+
+        // Mostrar la primera sección por defecto
+        showSection('introduccion');
+
+    </script>
+</body>
+
+</html>

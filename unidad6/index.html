@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 6: Respuesta en Frecuencia</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .section-content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Unidad 6: Respuesta en Frecuencia</h1>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('conceptos-basicos')">6.1 Conceptos Básicos</a></li>
+            <li><a href="#" onclick="showSection('respuesta-en-baja-frecuencia')">6.2 Respuesta en baja frecuencia de un
+                    amplificador con MOSFET de enriquecimiento en configuración surtidor común</a></li>
+            <li><a href="#" onclick="showSection('respuesta-en-alta-frecuencia')">6.3 Respuesta en alta frecuencia de un
+                    amplificador con MOSFET de enriquecimiento en configuración surtidor común</a></li>
+            <li><a href="#" onclick="showSection('solucion-de-ejercicio')">6.4 Solución de Ejercicio</a></li>
+            <!-- Agrega otros enlaces aquí -->
+        </ul>
+    </nav>
+
+    <div id="conceptos-basicos" class="section-content"
+        style="display: flex; flex-direction: column; align-items: center;">
+        <h2>6.1 Conceptos Básicos</h2>
+        <!-- Imagenes -->
+        <img src="images/rf1.jpg" alt="Dibujo del diodo" style="width: 50%; height: auto; margin-bottom: 300px;">
+        <img src="images/rf2.jpg" alt="Dibujo del diodo" style="width: 50%; height: auto; margin-bottom: 600px;">
+        <img src="images/rf3.jpg" alt="Dibujo del diodo" style="width: 50%; height: auto; margin-bottom: 200px;">
+    </div>
+
+    <div id="respuesta-en-baja-frecuencia" class="section-content">
+        <h2>6.2 Respuesta en baja frecuencia de un amplificador con MOSFET de enriquecimiento en configuración surtidor
+            común</h2>
+        <!-- Imagenes -->
+        <img src="images/rf4.jpg" alt="Dibujo del diodo" style="width: 50%; height: auto; margin-bottom: 300px;">
+        <img src="images/rf5.jpg" alt="Dibujo del diodo" style="width: 50%; height: auto; margin-bottom: 600px;">
+        <img src="images/rf6.jpg" alt="Dibujo del diodo" style="width: 50%; height: auto; margin-bottom: 200px;">
+        <img src="images/rf7.jpg" alt="Dibujo del diodo" style="width: 50%; height: auto; margin-bottom: 200px;">
+    </div>
+
+    <div id="respuesta-en-alta-frecuencia" class="section-content">
+        <h2>6.3 Respuesta en alta frecuencia de un amplificador con MOSFET de enriquecimiento en configuración surtidor
+            común</h2>
+
+        <!-- Imagenes -->
+        <img src="images/rf8.jpg" alt="Dibujo del diodo" style="width: 50%; height: auto; margin-bottom: 300px;">
+        <img src="images/rf9.jpg" alt="Dibujo del diodo" style="width: 50%; height: auto; margin-bottom: 600px;">
+        <img src="images/rf610jpg" alt="Dibujo del diodo" style="width: 50%; height: auto; margin-bottom: 200px;">
+        <img src="images/rf11.jpg" alt="Dibujo del diodo" style="width: 50%; height: auto; margin-bottom: 200px;">
+        <img src="images/rf12.jpg" alt="Dibujo del diodo" style="width: 50%; height: auto; margin-bottom: 200px;">
+    </div>
+
+
+    <div id="solucion-de-ejercicio" class="section-content">
+        <h2>6.4 Solución de Ejercicio</h2>
+
+
+
+        <h3>Respuesta en Frecuencia</h3>
+
+        <!-- Imagen del amplificador  -->
+        <div style="text-align: center;">
+            <img src="images/amplificadorconmosfet.png" alt="Dibujo del amplificador" style="width: 25%; height: auto;">
+        </div>
+
+        <p>Dentro del análisis en alta frecuencia, Cx es una capacitancia que se puede añadir entre G y S del MOSFET, con el objetivo de disminuir fH. Debe estar en el orden de los pF.</p>
+        
+
+        <!-- Fila de columnas -->
+        <div class="row">
+
+            <div class="column">
+
+
+                <div class="container">
+                    <h1>Análisis DC</h1>
+                    <div class="form-group">
+                        <label for="VDDrf">VDD (V):</label>
+                        <input type="number" id="VDDrf" placeholder="Ingrese el valor de VDD (V)">
+                    </div>
+                    <div class="form-group">
+                        <label for="R1rf">R1 (kΩ):</label>
+                        <input type="number" id="R1rf" placeholder="Ingrese el valor de R1 (kΩ)">
+                    </div>
+                    <div class="form-group">
+                        <label for="R2rf">R2 (kΩ):</label>
+                        <input type="number" id="R2rf" placeholder="Ingrese el valor de R2 (kΩ)">
+                    </div>
+                    <div class="form-group">
+                        <label for="RDrf">RD (kΩ):</label>
+                        <input type="number" id="RDrf" placeholder="Ingrese el valor de RD (kΩ)">
+                    </div>
+                    <div class="form-group">
+                        <label for="VTrf">VT (V):</label>
+                        <input type="number" id="VTrf" placeholder="Ingrese el valor de VT (V)">
+                    </div>
+                    <div class="form-group">
+                        <label for="krf">K (mA/V*V):</label>
+                        <input type="number" id="krf" placeholder="Ingrese el valor de K (mA/(V*V))">
+                    </div>
+
+                    <div class="form-group">
+                        <button onclick="calcularrfDC()">Calcular</button>
+                    </div>
+                    <div class="result" id="result"></div>
+                </div>
+
+
+
+                <div class="output-box">
+                    <p id="resultado1">VGS: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado2">ID: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado3">VDS: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado4">gm: --</p>
+                </div>
+                <div class="output-box">
+                    <p id="resultado5">rd: --</p>
+                </div>
+
+            </div>
+
+
+
+            <div class="column">
+
+                <!-- Formulario para el analisis en la segunda columna -->
+                <style>
+                    .container {
+                        background: #fff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        width: 50%;
+                        margin-bottom: 20px;
+                    }
+
+                    .form-group {
+                        margin-bottom: 15px;
+                    }
+
+                    .form-group label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    .form-group input {
+                        width: 100%;
+                        padding: 8px;
+                        box-sizing: border-box;
+                    }
+
+                    .form-group button {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+
+                    .result {
+                        margin-top: 15px;
+                        font-size: 18px;
+                    }
+                </style>
+
+                <div class="container">
+                    <h1>Análisis en Baja Frecuencia</h1>
+
+                    <div class="form-group">
+                        <label for="Rirf">Ri (kΩ):</label>
+                        <input type="number" id="Rirf" placeholder="Ingrese el valor de Ri (kΩ)">
+                    </div>
+                    <div class="form-group">
+                        <label for="RLrf">RL (kΩ):</label>
+                        <input type="number" id="RLrf" placeholder="Ingrese el valor de RL (kΩ)">
+                    </div>
+                    <div class="form-group">
+                        <label for="Cirf">Ci (uF):</label>
+                        <input type="number" id="Cirf" placeholder="Ingrese el valor de Ci (uF)">
+                    </div>
+                    <div class="form-group">
+                        <label for="Corf">Co (uF):</label>
+                        <input type="number" id="Corf" placeholder="Ingrese el valor de Co (uF)">
+                    </div>
+                    <div class="form-group">
+                        <label for="rdbf">rd (kΩ):</label>
+                        <input type="number" id="rdbf" placeholder="Ingrese el valor de rd (kΩ)">
+                    </div>
+
+                    <div class="form-group">
+                        <button onclick="calcularpolosbf()">Calcular</button>
+                    </div>
+                    <div class="result" id="result"></div>
+                </div>
+
+
+
+
+                <div class="output-box">
+                    <p id="resultado6">poloCi: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado7">poloCo: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado8">fL: --</p>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="column">
+
+
+                <!-- Formulario para el diseño en la tercera columna -->
+                <style>
+                    .container {
+                        background: #fff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        width: 50%;
+                        margin-bottom: 20px;
+                    }
+
+                    .form-group {
+                        margin-bottom: 15px;
+                    }
+
+                    .form-group label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    .form-group input {
+                        width: 100%;
+                        padding: 8px;
+                        box-sizing: border-box;
+                    }
+
+                    .form-group button {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+
+                    .result {
+                        margin-top: 15px;
+                        font-size: 18px;
+                    }
+                </style>
+
+                <div class="container">
+                    <h1>Análisis en Alta Frecuencia</h1>
+
+                    <div class="form-group">
+                        <label for="Cgs">Cgs (pF):</label>
+                        <input type="number" id="Cgs" placeholder="Ingrese el valor de Cgs (pF)">
+                    </div>
+                    <div class="form-group">
+                        <label for="Cgd">Cgd (pF):</label>
+                        <input type="number" id="Cgd" placeholder="Ingrese el valor de Cgd (pF)">
+                    </div>
+                    <div class="form-group">
+                        <label for="Cx">Cx (pF):</label>
+                        <input type="number" id="Cx" placeholder="Ingrese el valor de Cx (pF)">
+                    </div>
+                    <div class="form-group">
+                        <label for="gmrf">gm (mS):</label>
+                        <input type="number" id="gmrf" placeholder="Ingrese el valor de gm (mS)">
+                    </div>
+
+
+                    <div class="form-group">
+                        <button onclick="calcularpolosaf()">Calcular</button>
+                    </div>
+                    <div class="result" id="result"></div>
+                </div>
+
+
+
+                <div class="output-box">
+                    <p id="resultado9"> p1: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado10">p2: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado11">fH: --</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        let R1rf;
+        let R2rf;
+        let RDrf;
+        let rdbf;
+                let Rirf;
+        let RLrf;
+        
+
+
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section-content');
+            sections.forEach(function (section) {
+                section.style.display = 'none';
+            });
+
+            var sectionToShow = document.getElementById(sectionId);
+            if (sectionToShow) {
+                sectionToShow.style.display = 'block';
+            }
+        }
+
+        function calcularrfDC() {
+            var VDDrf = parseFloat(document.getElementById('VDDrf').value);
+            var R1rf = parseFloat(document.getElementById('R1rf').value);
+            var R2rf = parseFloat(document.getElementById('R2rf').value);
+            var RDrf = parseFloat(document.getElementById('RDrf').value);
+            var VTrf = parseFloat(document.getElementById('VTrf').value);
+            var krf = parseFloat(document.getElementById('krf').value);
+
+            // Verifica si los valores ingresados son válidos
+            if (!isNaN(VDDrf) && !isNaN(R1rf) && !isNaN(R2rf) && !isNaN(RDrf) && !isNaN(VTrf) && !isNaN(krf)) {
+                // Convierte las entradas a números
+                VDDrf = parseFloat(VDDrf);
+                R1rf = parseFloat(R1rf);
+                R2rf = parseFloat(R2rf);
+                RDrf = parseFloat(RDrf);
+                VTrf = parseFloat(VTrf);
+                krf = parseFloat(krf);
+
+                // Calcula
+                var VGSrf = VDDrf * R2rf / (R1rf + R2rf);
+                var IDrf = krf * (VGSrf - VTrf) * (VGSrf - VTrf);
+                var VDSrf = VDDrf - IDrf * RDrf;
+                var gm = 2 * krf * (VGSrf - VTrf);
+                var rd = 100 / IDrf;
+
+                // Muestra los resultados
+                document.getElementById('resultado1').innerText = "VGS: " + VGSrf.toFixed(2) + " V";
+                document.getElementById('resultado2').innerText = "ID: " + IDrf.toFixed(2) + " mA";
+                document.getElementById('resultado3').innerText = "VDS: " + VDSrf.toFixed(2) + " V";
+                document.getElementById('resultado4').innerText = "gm: " + gm.toFixed(2) + " mS";
+                document.getElementById('resultado5').innerText = "rd: " + rd.toFixed(2) + " kΩ";
+            } else {
+                document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos para todos los campos.";
+            }
+        }
+
+
+        function calcularpolosbf() {
+            R1rf = parseFloat(document.getElementById('R1rf').value);
+            R2rf = parseFloat(document.getElementById('R2rf').value);
+            RDrf = parseFloat(document.getElementById('RDrf').value);
+            
+            var Rirf = parseFloat(document.getElementById('Rirf').value);
+            var RLrf = parseFloat(document.getElementById('RLrf').value);
+            var Cirf = parseFloat(document.getElementById('Cirf').value);
+            var Corf = parseFloat(document.getElementById('Corf').value);
+            var rdbf = parseFloat(document.getElementById('rdbf').value);
+
+            // Verifica si los valores ingresados son válidos
+            if (!isNaN(Rirf) && !isNaN(RLrf) && !isNaN(Cirf) && !isNaN(Corf)&& !isNaN(rdbf)) {
+                // Convierte las entradas a números
+                Rirf = parseFloat(Rirf);
+                RLrf = parseFloat(RLrf);
+                Cirf = parseFloat(Cirf);
+                Corf = parseFloat(Corf);
+                rdbf = parseFloat(rdbf);
+
+                // Calcula 
+                var RCi = Rirf + R1rf * R2rf / (R1rf + R2rf);
+                var poloCi = 1000000 / (2 * 3.1416 * 1000 * RCi * Cirf);
+                var RCo = RLrf + rdbf * RDrf / (rdbf + RDrf);
+                var poloCo = 1000000 / (2 * 3.1416 * 1000 * RCo * Corf);
+                var fL = Math.max(poloCi, poloCo);
+
+                // Muestra los resultados
+                document.getElementById('resultado6').innerText = "poloCi: " + poloCi.toFixed(2) + " Hz";
+                document.getElementById('resultado7').innerText = "poloCo: " + poloCo.toFixed(2) + " Hz";
+                document.getElementById('resultado8').innerText = "fL: " + fL.toFixed(2) + " Hz";
+
+            } else {
+                document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos para todos los campos.";
+            }
+        }
+
+
+
+        function calcularpolosaf() {
+            var Cgs = parseFloat(document.getElementById('Cgs').value);
+            var Cgd = parseFloat(document.getElementById('Cgd').value);
+            var Cx = parseFloat(document.getElementById('Cx').value);
+            R1rf = parseFloat(document.getElementById('R1rf').value);
+            R2rf = parseFloat(document.getElementById('R2rf').value);
+            RDrf = parseFloat(document.getElementById('RDrf').value);
+            RLrf = parseFloat(document.getElementById('RLrf').value);
+            Rirf = parseFloat(document.getElementById('Rirf').value);
+            rdbf = parseFloat(document.getElementById('rdbf').value);
+            var gmrf = parseFloat(document.getElementById('gmrf').value);
+
+            // Verifica si los valores ingresados son válidos
+            if (!isNaN(Cgs) && !isNaN(Cgd) && !isNaN(Cx)) {
+                // Convierte las entradas a números
+                Cgs = parseFloat(Cgs);
+                Cgd = parseFloat(Cgd);
+                Cx = parseFloat(Cx);
+
+                // Calcula 
+                var Rparalelosalida = 1 / (1 / rdbf + 1 / RDrf + 1 / RLrf);
+                var CM = (1 + gmrf * Rparalelosalida) * (Cgd + Cx);
+                var Rparaleloentrada = 1 / (1 / Rirf + 1 / R1rf + 1 / R2rf);
+                var polo1 = 1000000 / (2 * 3.1416 * 1000 * Rparaleloentrada * (Cgs + CM));
+                var polo2 = 1000000 / (2 * 3.1416 * 1000 * Rparalelosalida * (Cgd+Cx));
+                var fH = Math.min(polo1, polo2);
+
+                // Muestra los resultados
+                document.getElementById('resultado9').innerText = "polo1: " + polo1.toFixed(2) + " MHz";
+                document.getElementById('resultado10').innerText = "polo2: " + polo2.toFixed(2) + " MHz";
+                document.getElementById('resultado11').innerText = "fH: " + fH.toFixed(2) + " MHz";
+
+            } else {
+                document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos para todos los campos.";
+            }
+        }
+
+
+
+
+
+        // Mostrar la primera sección por defecto
+        showSection('introduccion');
+
+    </script>
+</body>
+
+</html>

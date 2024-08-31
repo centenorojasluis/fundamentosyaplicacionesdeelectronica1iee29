@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    color: #004080; /* Azul celeste */
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #003366; /* Azul oscuro */
+}
+
+nav ul li {
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+}
+
+nav ul li a {
+    display: block; /* Hace que el enlace ocupe toda la anchura del elemento de la lista */
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    background-color: #004080; /* Azul celeste */
+}
+
+nav ul li a:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #004080; /* Azul celeste */
+    color: white;
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: "Times New Roman", serif;
+}
+
+.header-image {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60px; /* Ajusta el tamaño según tus necesidades */
+    width: auto; /* Mantén la proporción de la imagen */
+}
+
+header span {
+    flex: 1; /* Permite que el texto ocupe el espacio restante */
+}
+
+/* Section Styles */
+.section-content {
+    display: none;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-content h2 {
+    color: #003366; /* Azul oscuro */
+}
+
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.button {
+    background-color: #004080; /* Azul celeste */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+.output-box {
+    margin-top: 15px;
+}
+
+.output-box p {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #003366; /* Azul oscuro */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+.divider {
+    border: 0;
+    border-top: 2px solid #ddd;
+    margin: 20px 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.column {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

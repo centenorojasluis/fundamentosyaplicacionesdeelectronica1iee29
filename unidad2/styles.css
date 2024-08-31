@@ -1,0 +1,13 @@
+.imagen-izquierda {
+    float: left;
+    margin-right: 10px; /* Opcional: agrega espacio a la derecha de la imagen */
+  }
+  
+  .container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-bottom: 20px;
+}

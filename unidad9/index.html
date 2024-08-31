@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 9: Convertidores Digital-Analógico y Analógico-Digital</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .section-content {
+            display: none;
+        }
+
+        /* Estilos para el encabezado */
+        header {
+            display: flex;
+            align-items: center;
+            background-color: #004080; /* Azul celeste */
+            color: white;
+            padding: 15px;
+            position: relative;
+            width: 100%;
+        }
+
+        header img {
+            height: 50px; /* Ajusta la altura según sea necesario */
+            margin-right: 15px; /* Espacio entre la imagen y el texto */
+        }
+
+        header .title {
+            flex: 1; /* Permite que el texto ocupe el espacio restante */
+            text-align: center; /* Centra el texto */
+            font-size: 18px;
+        }
+
+        header .title span {
+            display: block; /* Cada línea del texto en una línea separada */
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            background-color: #004080; /* Azul celeste */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .container {
+            margin-bottom: 60px; /* Espacio para el pie de página */
+        }
+
+        /* Otros estilos para el contenido */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        h1 {
+            color: #004080; /* Azul celeste */
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: #003366; /* Azul oscuro */
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            background-color: #004080; /* Azul celeste */
+        }
+
+        nav ul li a:hover {
+            background-color: #0056b3; /* Azul más oscuro */
+        }
+
+        .section-content {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-content h2 {
+            color: #003366; /* Azul oscuro */
+        }
+
+        .input-box {
+            margin-bottom: 10px;
+        }
+
+        .input-box label {
+            margin-right: 10px;
+        }
+
+        .output-box {
+            margin-top: 10px;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/pucp.png" alt="Logo PUCP">
+        <div class="title">
+            PONTIFICIA UNIVERSIDAD CATÓLICA DEL PERÚ
+            <p class="subtitle">Fundamentos y Aplicaciones de Electrónica</p>
+        </div>
+    </header>
+
+
+    
+
+
+
+    <div class="container">
+        <h1>Unidad 9: Convertidores Digital-Analógico y Analógico-Digital</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('Caracteristicas-DAC')"> 9.1 Características del convertidor digital-analógico (DAC). </a></li>
+                <li><a href="#" onclick="showSection('Arquitecturas-DAC')"> 9.2 Arquitecturas: resistencias ponderadas, divisor resistivo (string dac) y R-2R</a></li>
+                <li><a href="#" onclick="showSection('Caracteristicas-ADC')"> 9.3 Características del convertidor analógico-digital (ADC)</a></li>
+                <li><a href="#" onclick="showSection('ModeloArquitecturas-ADC')"> 9.4 Arquitecturas: integrador de doble rampa (dual slope), aproximaciones sucesivas (SAR ADC) y Flash</a></li>
+                <li><a href="#" onclick="showSection('Circuito-Muestreo-Retencion')"> 9.5 Circuito de muestreo y retención (S/H)</a></li>
+                <li><a href="#" onclick="showSection('Dispositivos-Referencia')">9.6 Dispositivos de referencia de tensión (voltage reference)</a></li>
+                <!-- Agrega otros enlaces aquí -->
+            </ul>
+        </nav>
+
+        <div id="Caracteristicas-DAC" class="section-content">
+            <h2>9.1 Principio de funcionamiento</h2>
+            <p>Cálculo de 1LSB y Vout</p>
+
+            <div class="input-box">
+                <label for="VREF">VREF (V):</label>
+                <input type="number" id="VREF" placeholder="Ingrese el valor de VREF (V)" />
+            </div>
+
+            <div class="input-box">
+                <label for="n">n :</label>
+                <input type="number" id="n" placeholder="Ingrese el valor de n" />
+            </div>
+
+            <div class="input-box">
+                <label for="codigo">codigo:</label>
+                <input type="number" id="codigo" placeholder="Ingrese el codigo en decimal" />
+            </div>
+
+            <button onclick="calcular1()">Calcular</button>
+
+            <div class="output-box">
+                <p id="resultado1">1LSB: --</p>
+            </div>
+
+            <div class="output-box">
+                <p id="resultado2">VDAC: --</p>
+            </div>
+        </div>
+
+        <div id="Arquitecturas-DAC" class="section-content">
+            <h2>9.2 Arquitecturas: resistencias ponderadas, divisor resistivo (string dac) y R-2R</h2>
+            <p>Construcción del MOSFET</p>
+
+            <p>Cálculo de 1LSB y Vout</p>
+
+            <div class="input-box">
+                <label for="VREF1">VREF (V):</label>
+                <input type="number" id="VREF1" placeholder="Ingrese el valor de VREF (V)" />
+            </div>
+
+            <div class="input-box">
+                <label for="n">n :</label>
+                <input type="number" id="n1" placeholder="Ingrese el valor de n" />
+            </div>
+
+            <div class="input-box">
+                <label for="codigo">codigo:</label>
+                <input type="number" id="codigo1" placeholder="Ingrese el codigo en decimal" />
+            </div>
+
+            <button onclick="calcular2()">Calcular</button>
+
+            <div class="output-box">
+                <p id="resultado3">1LSB: --</p>
+            </div>
+
+            <div class="output-box">
+                <p id="resultado4">VDAC: --</p>
+            </div>
+
+            <div class="output-box">
+                <p id="resultado5">Vout: --</p>
+            </div>
+        </div>
+
+        <div id="Caracteristicas-ADC" class="section-content">
+            <h2>9.3 Características del convertidor analógico-digital (ADC)</h2>
+            <p>Construcción del MOSFET</p>
+        </div>
+
+        <div id="ModeloArquitecturas-ADC" class="section-content">
+            <h2>9.4 Arquitecturas: integrador de doble rampa (dual slope), aproximaciones sucesivas (SAR ADC) y Flash</h2>
+            <p>Construcción del MOSFET</p>
+        </div>
+
+        <div id="Circuito-Muestreo-Retencion" class="section-content">
+            <h2>9.5 Circuito de muestreo y retención (S/H)</h2>
+            <p>Construcción del MOSFET</p>
+        </div>
+
+        <div id="Dispositivos-Referencia" class="section-content">
+            <h2>9.6 Dispositivos de referencia de tensión (voltage reference)</h2>
+            <p>Construcción del MOSFET</p>
+        </div>
+
+        <iframe width="1536" height="864" src="https://miro.com/app/board/uXjVK6VnnwA=/?share_link_id=49980562886"
+            frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <footer>
+        Ingeniería Mecatrónica
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Ocultar todas las secciones
+            var sections = document.querySelectorAll('.section-content');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Mostrar la sección seleccionada
+            var sectionToShow = document.getElementById(sectionId);
+            if (sectionToShow) {
+                sectionToShow.style.display = 'block';
+            }
+        }
+
+        function calcular1() {
+            var VREF = parseFloat(document.getElementById('VREF').value);
+            var n = parseFloat(document.getElementById('n').value);
+            var codigo = parseFloat(document.getElementById('codigo').value);
+
+            // Verifica si los valores ingresados son válidos
+            if (!isNaN(VREF) && !isNaN(n) && !isNaN(codigo)) {
+                // Calcula LSB
+                var LSB = VREF / (2 ** n);
+
+                // Verifica si el código está en el rango permitido
+                var maxCodigo = 2 ** n - 1;
+                if (codigo >= 0 && codigo <= maxCodigo) {
+                    var VDAC = codigo * LSB;
+
+                    // Muestra los resultados
+                    document.getElementById('resultado1').innerText = "1LSB: " + LSB.toFixed(4) + " V";
+                    document.getElementById('resultado2').innerText = "VDAC: " + VDAC.toFixed(4) + " V";
+                } else {
+                    document.getElementById('resultado1').innerText = "El valor del código debe estar entre 0 y " + maxCodigo + ".";
+                    document.getElementById('resultado2').innerText = ""; // Limpia el resultado de VDAC
+                }
+            } else {
+                document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos.";
+                document.getElementById('resultado2').innerText = ""; // Limpia el resultado de VDAC
+            }
+        }
+
+        function calcular2() {
+            var VREF1 = parseFloat(document.getElementById('VREF1').value);
+            var n1 = parseFloat(document.getElementById('n1').value);
+            var codigo1 = parseFloat(document.getElementById('codigo1').value);
+
+            // Verifica si los valores ingresados son válidos
+            if (!isNaN(VREF1) && !isNaN(n1) && !isNaN(codigo1)) {
+                // Calcula LSB
+                var LSB1 = VREF1 / (2 ** n1);
+
+                // Verifica si el código está en el rango permitido
+                var maxCodigo1 = 2 ** n1 - 1;
+                if (codigo1 >= 0 && codigo1 <= maxCodigo1) {
+                    var VDAC1 = codigo1 * LSB1;
+                    var Vout1 = 2 * codigo1 * LSB1 - VREF1;
+
+                    // Muestra los resultados
+                    document.getElementById('resultado3').innerText = "1LSB: " + LSB1.toFixed(4) + " V";
+                    document.getElementById('resultado4').innerText = "VDAC: " + VDAC1.toFixed(4) + " V";
+                    document.getElementById('resultado5').innerText = "Vout: " + Vout1.toFixed(4) + " V";
+                } else {
+                    document.getElementById('resultado3').innerText = "El valor del código debe estar entre 0 y " + maxCodigo1 + ".";
+                    document.getElementById('resultado4').innerText = ""; // Limpia el resultado de VDAC
+                    document.getElementById('resultado5').innerText = ""; // Limpia el resultado de Vout
+                }
+            } else {
+                document.getElementById('resultado3').innerText = "Por favor, ingrese valores válidos.";
+                document.getElementById('resultado4').innerText = ""; // Limpia el resultado de VDAC
+                document.getElementById('resultado5').innerText = ""; // Limpia el resultado de Vout
+            }
+        }
+
+        // Mostrar la primera sección por defecto
+        showSection('Caracteristicas-DAC');
+    </script>
+
+</body>
+
+</html>

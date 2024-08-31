@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos y Aplicaciones de Electrónica</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+    <script>
+        // Solicitar usuario y contraseña al cargar la página
+        window.onload = function() {
+            var usuario_correcto = "diode"; // Cambia esto por el usuario que desees
+            var contraseña_correcta = "freewheeling"; // Cambia esto por la contraseña que desees
+
+            var usuario = prompt("Por favor, ingrese su usuario:");
+            var contraseña = prompt("Por favor, ingrese su contraseña:");
+
+            if (usuario !== usuario_correcto || contraseña !== contraseña_correcta) {
+                alert("Usuario o contraseña incorrectos. No tienes acceso a esta página.");
+                window.location.href = "https://www.google.com"; // Redirigir a otra página si usuario o contraseña son incorrectos
+            }
+        };
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+    <header>
+        <img src="images/pucp.png" alt="Logo" class="header-image" style="width: 100px; height: auto;">
+        <div class="title"> PONTIFICIA UNIVERSIDAD CATÓLICA DEL PERÚ
+            <p class="subtitle">Ingeniería Mecatrónica</p>
+            <p class="subtitle">1IEE29</p>
+        </div>
+    </header>
+
+    <h1>Fundamentos y Aplicaciones de Electrónica</h1>
+    <nav>
+        <ul>
+            <li><a href="unidad1/index.html">Unidad 1: El Diodo de Unión PN</a></li>
+            <li><a href="unidad2/index.html">Unidad 2: Transistores Bipolares</a></li>
+            <li><a href="unidad3/index.html">Unidad 3: Amplificadores de Una Etapa en Pequeña Señal con Transistores
+                    Bipolares Modelados con Parámetros Híbridos</a></li>
+            <li><a href="unidad4/index.html">Unidad 4: Transistor JFET</a></li>
+            <li><a href="unidad5/index.html">Unidad 5: Transistor MOSFET</a></li>
+            <li><a href="unidad6/index.html">Unidad 6: Respuesta en Frecuencia de un Amplificador</a></li>
+            <li><a href="unidad7/index.html">Unidad 7: Amplificador Operacional</a></li>
+            <li><a href="unidad8/index.html">Unidad 8: Rectificadores Controlables</a></li>
+            <li><a href="unidad9/index.html">Unidad 9: Convertidores Digital-Analógico y Analógico-Digital</a></li>
+        </ul>
+    </nav>
+    <footer>
+        <p>© Pontificia Universidad Católica del Perú - 2024. Todos los derechos reservados.
+            Av. Universitaria 1801, San Miguel, Lima 32, Perú | Teléfono (511) 626-2000</p>
+        <p>Proyecto de Innovación en la Docencia 2022</p>
+    </footer>
+</body>
+
+</html>

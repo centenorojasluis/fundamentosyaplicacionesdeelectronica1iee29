@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 3: Amplificadores de una Etapa en Pequeña Señal con Transistores Bipolares modelados con parámetros
+        híbridos</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .section-content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Unidad 3: Amplificadores de una Etapa en Pequeña Señal con Transistores Bipolares modelados con parámetros
+        híbridos</h1>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('Introduccion')">3.1 Introducción a los circuitos amplificadores</a>
+            </li>
+            <li><a href="#" onclick="showSection('Modelo-parámetros-h')">3.2 Modelo de parámetros híbridos en emisor
+                    común</a></li>
+            <li><a href="#" onclick="showSection('Especificaciones-técnicas')">3.3 Especificaciones técnicas de
+                    transistores bipolares en pequeña señal</a></li>
+            <li><a href="#" onclick="showSection('Amplificador-EC')">3.4 El transistor bipolar en configuración emisor
+                    común (EC)</a></li>
+            <li><a href="#" onclick="showSection('Amplificador-CC')">3.5 El transistor bipolar en configuración colector
+                    común (CC)</a></li>
+
+            <!-- Agrega otros enlaces aquí -->
+        </ul>
+    </nav>
+
+    <div id="Introduccion" class="section-content">
+        <h2>3.1 Introducción a los circuitos amplificadores</h2>
+        <p> </p>
+        <!-- Imagen del amplificador -->
+        <p></p>
+        <div style="text-align: center;">
+            <iframe width="1536" height="864" src="https://miro.com/app/board/uXjVN4XZJgY=/?share_link_id=828882449725"
+                frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+    <div id="Modelo-parámetros-h" class="section-content">
+        <h2>3.2 Modelo de parámetros híbridos</h2>
+        <p> </p>
+
+        <!-- Texto adicional -->
+        <p>Los parámetros utilizados en el circuito simplificado son el hie y el hfe.</p>
+
+        <!-- Imagen del diodo -->
+        <img src="images/modelosimplificado.jpg" alt="Parametros h" style="max-width: 30%; height: auto;">
+    </div>
+
+
+
+    <div id="Especificaciones-técnicas" class="section-content">
+        <h2>3.3 Especificaciones técnicas de transistores bipolares en pequeña señal</h2>
+        <p> </p>
+
+        <!-- Texto adicional -->
+        <p>Los parámetrops más importantes del BJT son hie y hfe.</p>
+
+        <!-- Imagen del diodo -->
+        <img src="images/parametrosh.jpg" alt="parametros H" style="max-width: 50%; height: auto;">
+    </div>
+
+
+    <div id="Amplificador-EC" class="section-content">
+        <h2>3.4 El amplificador con BJT en configuración emisor común (EC)</h2>
+        <p> </p>
+
+        <!-- Texto adicional -->
+        <p>El amplificador en configuración emisor común tiene alta ganancia de voltaje, alta ganancia de corriente, Zi
+            de regular valor y la impedancia de salida es RC. La señal de salida está invertida respecto de la entrada.
+            La ganancia de voltaje es Av=vo/vi, la ganancia de corriente Ai=io/ii.
+        </p>
+
+
+        <!-- Primera fila de columnas -->
+        <div class="row">
+            <!-- Primera columnas -->
+            <div class="column">
+                <h3>Amplificador en configuración emisor común</h3>
+                <p> </p>
+                <!-- Imagen -->
+                <img src="images/amplificadorec.jpg" alt="Dibujo del amplificador EC"
+                    style="max-width: 80%; height: auto;">
+
+
+                <style>
+                    .file-download {
+                        margin-top: 20px;
+                        text-align: center;
+                    }
+
+                    .file-download a {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        color: white;
+                        background-color: #007bff;
+                        text-decoration: none;
+                        border-radius: 5px;
+                    }
+
+                    .file-download a:hover {
+                        background-color: #0056b3;
+                    }
+                </style>
+
+
+                <div class="container">
+                    <h1> </h1>
+                    <div class="file-download">
+                        <a href="images/1IEE29 Amplificador EC.pdsprj" download>Descargar Archivo de Proteus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PSegunda columnas -->
+            <div class="column">
+
+                <!-- Formulario para el analisis en la segunda columna -->
+                <style>
+                    .container {
+                        background: #fff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        width: 300px;
+                        margin-bottom: 20px;
+                    }
+
+                    .form-group {
+                        margin-bottom: 15px;
+                    }
+
+                    .form-group label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    .form-group input {
+                        width: 100%;
+                        padding: 8px;
+                        box-sizing: border-box;
+                    }
+
+                    .form-group button {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+
+                    .result {
+                        margin-top: 15px;
+                        font-size: 18px;
+                    }
+                </style>
+
+                <div class="container">
+                    <h1>Análisis DC </h1>
+
+                    <div class="input-box">
+                        <label for="β">β:</label>
+                        <input type="number" id="β" placeholder="Ingrese el valor de β" />
+                    </div>
+
+                    <div class="input-box">
+                        <label for="VCC">VCC (V):</label>
+                        <input type="number" id="VCC" placeholder="Ingrese el valor de VCC (V)" />
+                    </div>
+
+                    <div class="input-box">
+                        <label for="R1">R1 (kΩ):</label>
+                        <input type="number" id="R1" placeholder="Ingrese el valor de R1 (kΩ)" />
+                    </div>
+
+                    <div class="input-box">
+                        <label for="R2">R2 (kΩ):</label>
+                        <input type="number" id="R2" placeholder="Ingrese el valor de R2 (kΩ)" />
+                    </div>
+
+                    <div class="input-box">
+                        <label for="RC">RC (kΩ):</label>
+                        <input type="number" id="RC" placeholder="Ingrese el valor de RC (kΩ)" />
+                    </div>
+
+                    <div class="input-box">
+                        <label for="RE">RE (kΩ):</label>
+                        <input type="number" id="RE" placeholder="Ingrese el valor de RE (kΩ)" />
+                    </div>
+
+
+                    <button onclick="calcular1()">Calcular</button>
+
+                    <div class="output-box">
+                        <p id="resultado1">VTH: --</p>
+                    </div>
+
+                    <div class="output-box">
+                        <p id="resultado2">RTH: --</p>
+                    </div>
+
+                    <div class="output-box">
+                        <p id="resultado3">ICQ: --</p>
+                    </div>
+
+                    <div class="output-box">
+                        <p id="resultado4">VCEQ: --</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tercera columnas -->
+            <div class="column">
+
+                <!-- Formulario para el diseño en la tercera columna -->
+                <style>
+                    .container {
+                        background: #fff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        width: 300px;
+                        margin-bottom: 20px;
+                    }
+
+                    .form-group {
+                        margin-bottom: 15px;
+                    }
+
+                    .form-group label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    .form-group input {
+                        width: 100%;
+                        padding: 8px;
+                        box-sizing: border-box;
+                    }
+
+                    .form-group button {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+
+                    .result {
+                        margin-top: 15px;
+                        font-size: 18px;
+                    }
+                </style>
+
+                <div class="container">
+                    <h1>Análisis pequeña señal</h1>
+                    <!-- Formulario para el análisis de pequeña señal -->
+                    <!-- Texto adicional -->
+                    <p> </p>
+
+                    <div class="input-box">
+                        <label for="hfe">hfe:</label>
+                        <input type="number" id="hfe" placeholder="Ingrese el valor de hfe" />
+                    </div>
+
+                    <div class="input-box">
+                        <label for="hie">hie (kΩ):</label>
+                        <input type="number" id="hie" placeholder="Ingrese el valor de hie (kΩ)" />
+                    </div>
+
+
+                    <div class="input-box">
+                        <label for="Ri">Ri (kΩ):</label>
+                        <input type="number" id="Ri" placeholder="Ingrese el valor de Ri (kΩ)" />
+                    </div>
+
+                    <div class="input-box">
+                        <label for="RL">RL (kΩ):</label>
+                        <input type="number" id="RL" placeholder="Ingrese el valor de RL (kΩ)" />
+                    </div>
+
+
+                    <button onclick="calcular2()">Calcular</button>
+
+                    <div class="output-box">
+                        <p id="resultado5">Zi: --</p>
+                    </div>
+
+                    <div class="output-box">
+                        <p id="resultado6">Zo: --</p>
+                    </div>
+
+                    <div class="output-box">
+                        <p id="resultado7">Av: --</p>
+                    </div>
+
+                    <div class="output-box">
+                        <p id="resultado8">Ai: --</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+           
+        </div>
+        <p>Gráficas de las señales de entrada y salida</p>
+        <p>Revisa la siguiente página: <a href="http://labcloud.pucp.edu.pe/1IEE26/BJT_AMPLIFICADOR.html"
+                target="_blank">Máxima Excursión en la salida</a>.</p>
+
+    </div>
+    </div>
+
+    <div id="Amplificador-CC" class="section-content">
+        <h2>3.5 El amplificador con BJT en configuración colector común (CC)</h2>
+        <p> </p>
+
+        <!-- Texto adicional -->
+        <p>El Amplificador en configuración colector común tiene Av<1, Ai>1 (puede lograrlo), Zi
+                alta, Zo baja.
+        </p>
+     
+        <!-- Primera fila de columnas -->
+        <div class="row">
+            <!-- Primera columnas -->
+            <div class="column">
+                <h3>Amplificador en configuración colector común</h3>
+                <p> </p>
+                <!-- Imagen -->
+                
+                <img src="images/amplificadorcc.jpg" alt="Amplificador CC" style="max-width: 80%; height: auto;">
+
+
+                <style>
+                    .file-download {
+                        margin-top: 20px;
+                        text-align: center;
+                    }
+
+                    .file-download a {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        color: white;
+                        background-color: #007bff;
+                        text-decoration: none;
+                        border-radius: 5px;
+                    }
+
+                    .file-download a:hover {
+                        background-color: #0056b3;
+                    }
+                </style>
+
+
+                <div class="container">
+                    <h1> </h1>
+                    <div class="file-download">
+                        <a href="images/1IEE29 Amplificador CC.pdsprj" download>Descargar Archivo de Proteus</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PSegunda columnas -->
+            <div class="column">
+
+                <!-- Formulario para el analisis en la segunda columna -->
+                <style>
+                    .container {
+                        background: #fff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        width: 300px;
+                        margin-bottom: 20px;
+                    }
+
+                    .form-group {
+                        margin-bottom: 15px;
+                    }
+
+                    .form-group label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    .form-group input {
+                        width: 100%;
+                        padding: 8px;
+                        box-sizing: border-box;
+                    }
+
+                    .form-group button {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+
+                    .result {
+                        margin-top: 15px;
+                        font-size: 18px;
+                    }
+                </style>
+
+                <div class="container">
+                    <h2>Análisis DC</h2>
+
+                    <div class="input-box">
+                        <label for="βcc">β:</label>
+                        <input type="number" id="βcc" placeholder="Ingrese el valor de β" />
+                    </div>
+
+                    <div class="input-box">
+                        <label for="VCCcc">VCC (V):</label>
+                        <input type="number" id="VCCcc" placeholder="Ingrese el valor de VCC (V)" />
+                    </div>
+
+                    <div class="input-box">
+                        <label for="R1cc">R1 (kΩ):</label>
+                        <input type="number" id="R1cc" placeholder="Ingrese el valor de R1 (kΩ)" />
+                    </div>
+
+                    <div class="input-box">
+                        <label for="R2cc">R2 (kΩ):</label>
+                        <input type="number" id="R2cc" placeholder="Ingrese el valor de R2 (kΩ)" />
+                    </div>
+
+                    <div class="input-box">
+                        <label for="RCcc">RC (kΩ):</label>
+                        <input type="number" id="RCcc" placeholder="Ingrese el valor de RC (kΩ)" />
+                    </div>
+
+                    <div class="input-box">
+                        <label for="REcc">RE (kΩ):</label>
+                        <input type="number" id="REcc" placeholder="Ingrese el valor de RE (kΩ)" />
+                    </div>
+
+
+                    <button onclick="calcular3()">Calcular</button>
+
+                    <div class="output-box">
+                        <p id="resultado1cc">VTH: --</p>
+                    </div>
+
+                    <div class="output-box">
+                        <p id="resultado2cc">RTH: --</p>
+                    </div>
+
+                    <div class="output-box">
+                        <p id="resultado3cc">ICQ: --</p>
+                    </div>
+
+                    <div class="output-box">
+                        <p id="resultado4cc">VCEQ: --</p>
+                    </div>
+
+                </div>
+                </div>
+
+                <!-- Tercera columnas -->
+                <div class="column">
+
+                    <!-- Formulario para el diseño en la tercera columna -->
+                    <style>
+                        .container {
+                            background: #fff;
+                            padding: 20px;
+                            border-radius: 8px;
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                            width: 300px;
+                            margin-bottom: 20px;
+                        }
+
+                        .form-group {
+                            margin-bottom: 15px;
+                        }
+
+                        .form-group label {
+                            display: block;
+                            margin-bottom: 5px;
+                        }
+
+                        .form-group input {
+                            width: 100%;
+                            padding: 8px;
+                            box-sizing: border-box;
+                        }
+
+                        .form-group button {
+                            width: 100%;
+                            padding: 10px;
+                            background-color: #007bff;
+                            color: white;
+                            border: none;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
+
+                        .result {
+                            margin-top: 15px;
+                            font-size: 18px;
+                        }
+                    </style>
+
+                    <div class="container">
+                        <!-- Formulario para el análisis de pequeña señal -->
+                        <!-- Texto adicional -->
+                        <h2>Análisis pequeña señal</h2>
+
+
+                        <div class="input-box">
+                            <label for="hfecc">hfe:</label>
+                            <input type="number" id="hfecc" placeholder="Ingrese el valor de hfe" />
+                        </div>
+
+                        <div class="input-box">
+                            <label for="hiecc">hie (kΩ):</label>
+                            <input type="number" id="hiecc" placeholder="Ingrese el valor de hie (kΩ)" />
+                        </div>
+
+
+                        <div class="input-box">
+                            <label for="Ricc">Ri (kΩ):</label>
+                            <input type="number" id="Ricc" placeholder="Ingrese el valor de Ri (kΩ)" />
+                        </div>
+
+                        <div class="input-box">
+                            <label for="RLcc">RL (kΩ):</label>
+                            <input type="number" id="RLcc" placeholder="Ingrese el valor de RL (kΩ)" />
+                        </div>
+
+
+                        <button onclick="calcular4()">Calcular</button>
+
+                        <div class="output-box">
+                            <p id="resultado5cc">Zi: --</p>
+                        </div>
+
+                        <div class="output-box">
+                            <p id="resultado6cc">Zo: --</p>
+                        </div>
+
+                        <div class="output-box">
+                            <p id="resultado7cc">Av: --</p>
+                        </div>
+
+                        <div class="output-box">
+                            <p id="resultado8cc">Ai: --</p>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+                
+
+            </div>
+
+            <p>Gráficas de las señales de entrada y salida</p>
+            <p>Revisa la siguiente página: <a href="http://labcloud.pucp.edu.pe/1IEE26/BJT_AMPLIFICADOR.html"
+                    target="_blank">Máxima Excursión en la salida</a>.</p>
+
+        </div>
+
+      
+
+
+
+      
+
+
+
+        <script>
+
+
+            function showSection(sectionId) {
+                var sections = document.querySelectorAll('.section-content');
+                sections.forEach(function (section) {
+                    section.style.display = 'none';
+                });
+
+                var sectionToShow = document.getElementById(sectionId);
+                if (sectionToShow) {
+                    sectionToShow.style.display = 'block';
+                }
+            }
+
+            var global_RC;
+
+            function calcular1() {
+                var β = parseFloat(document.getElementById('β').value);
+                var VCC = parseFloat(document.getElementById('VCC').value);
+                var R1 = parseFloat(document.getElementById('R1').value);
+                var R2 = parseFloat(document.getElementById('R2').value);
+                var RC = parseFloat(document.getElementById('RC').value);
+                var RE = parseFloat(document.getElementById('RE').value);
+
+                // Verifica si los valores ingresados son válidos
+                if (!isNaN(β) && !isNaN(VCC) && !isNaN(R1) && !isNaN(R2) && !isNaN(RC) && !isNaN(RE)) {
+                    var RTH = R1 * R2 / (R1 + R2);
+                    var VTH = VCC * R2 / (R1 + R2);
+                    var ICQ = (VTH - 0.7) / (RE + RTH / β);
+                    var VCEQ = VCC - ICQ * (RC + RE);
+
+                    global_RC = RC; // Guardar RC en una variable global
+                    global_R1 = R1;
+                    global_R2 = R2;
+
+                    document.getElementById('resultado1').innerText = "VTH: " + VTH.toFixed(2) + " V";
+                    document.getElementById('resultado2').innerText = "RTH: " + RTH.toFixed(2) + " kΩ";
+                    document.getElementById('resultado3').innerText = "ICQ: " + ICQ.toFixed(2) + " mA";
+                    document.getElementById('resultado4').innerText = "VCEQ: " + VCEQ.toFixed(2) + " V";
+
+                } else {
+                    document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos.";
+                }
+            }
+
+
+            function calcular2() {
+                var hie = parseFloat(document.getElementById('hie').value);
+                var hfe = parseFloat(document.getElementById('hfe').value);
+                var Ri = parseFloat(document.getElementById('Ri').value);
+                var RL = parseFloat(document.getElementById('RL').value);
+
+                // Verifica si los valores ingresados son válidos
+                if (!isNaN(hie) && !isNaN(hfe) && !isNaN(Ri) && !isNaN(global_RC)) {
+                    var Zi = 1 / (1 / global_R1 + 1 / global_R2 + 1 / hie);
+                    var Zo = global_RC;
+                    var Av = (Zi / (Zi + Ri)) * ((-hfe) * (global_RC * RL) / (global_RC + RL)) / hie;
+                    var paralelo = 1 / (1 / global_R1 + 1 / global_R2);
+                    var Ai = (-hfe) * (global_RC / (global_RC + RL)) * (paralelo) / (paralelo + hie);
+
+
+                    document.getElementById('resultado5').innerText = "Zi: " + Zi.toFixed(2) + " kΩ";
+                    document.getElementById('resultado6').innerText = "Zo: " + Zo.toFixed(2) + " kΩ";
+                    document.getElementById('resultado7').innerText = "Av: " + Av.toFixed(2) + " ";
+                    document.getElementById('resultado8').innerText = "Ai: " + Ai.toFixed(2) + " ";
+
+                } else {
+                    document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos.";
+                }
+            }
+
+            var global_RCcc;
+
+
+            function calcular3() {
+                var βcc = parseFloat(document.getElementById('βcc').value);
+                var VCCcc = parseFloat(document.getElementById('VCCcc').value);
+                var R1cc = parseFloat(document.getElementById('R1cc').value);
+                var R2cc = parseFloat(document.getElementById('R2cc').value);
+                var RCcc = parseFloat(document.getElementById('RCcc').value);
+                var REcc = parseFloat(document.getElementById('REcc').value);
+
+                // Verifica si los valores ingresados son válidos
+                if (!isNaN(βcc) && !isNaN(VCCcc) && !isNaN(R1cc) && !isNaN(R2cc) && !isNaN(RCcc) && !isNaN(REcc)) {
+                    var RTHcc = R1cc * R2cc / (R1cc + R2cc);
+                    var VTHcc = VCCcc * R2cc / (R1cc + R2cc);
+                    var ICQcc = (VTHcc - 0.7) / (REcc + RTHcc / βcc);
+                    var VCEQcc = VCCcc - ICQcc * (RCcc + REcc);
+
+                    global_RCcc = RCcc;
+                    global_R1cc = R1cc;
+                    global_R2cc = R2cc;
+                    global_REcc = REcc;
+
+                    document.getElementById('resultado1cc').innerText = "VTH: " + VTHcc.toFixed(2) + " V";
+                    document.getElementById('resultado2cc').innerText = "RTH: " + RTHcc.toFixed(2) + " kΩ";
+                    document.getElementById('resultado3cc').innerText = "ICQ: " + ICQcc.toFixed(2) + " mA";
+                    document.getElementById('resultado4cc').innerText = "VCEQ: " + VCEQcc.toFixed(2) + " V";
+
+                } else {
+                    document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos.";
+                }
+            }
+
+
+            function calcular4() {
+                var hiecc = parseFloat(document.getElementById('hiecc').value);
+                var hfecc = parseFloat(document.getElementById('hfecc').value);
+                var Ricc = parseFloat(document.getElementById('Ricc').value);
+                var RLcc = parseFloat(document.getElementById('RLcc').value);
+
+
+                // Verifica si los valores ingresados son válidos
+                if (!isNaN(hiecc) && !isNaN(hfecc) && !isNaN(Ricc) && !isNaN(global_RCcc)) {
+                    var Zicc = 1 / (1 / global_R1cc + 1 / global_R2cc + 1 / (hiecc + (1 + hfecc) * (1 / (1 / global_REcc + 1 / RLcc))));
+                    var Zx = ((1 / (1 / Ricc + 1 / global_R1cc + 1 / global_R2cc)) + hiecc) / (1 + hfecc);
+                    var Zocc = Zx * global_REcc / (Zx + global_REcc);
+                    var Avcc = (Zicc / (Zicc + Ricc)) * (1 / (1 + hiecc / ((1 + hfecc) * (1 / (1 / global_REcc + 1 / RLcc)))));
+                    var Aicc = (1 + hfecc) * (global_REcc / (global_REcc + RLcc)) * Zicc / (hiecc + (1 + hfecc) * (global_REcc * RLcc / (global_REcc + RLcc)));
+
+
+                    document.getElementById('resultado5cc').innerText = "Zi: " + Zicc.toFixed(2) + " kΩ";
+                    document.getElementById('resultado6cc').innerText = "Zo: " + Zocc.toFixed(2) + " kΩ";
+                    document.getElementById('resultado7cc').innerText = "Av: " + Avcc.toFixed(2) + " ";
+                    document.getElementById('resultado8cc').innerText = "Ai: " + Aicc.toFixed(2) + " ";
+
+                } else {
+                    document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos.";
+                }
+            }
+
+
+            // Mostrar la primera sección por defecto
+            showSection('introduccion');
+
+        </script>
+</body>
+
+</html>

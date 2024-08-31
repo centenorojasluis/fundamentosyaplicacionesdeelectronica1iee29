@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 1: El Diodo de Unión PN</title>
+    <link rel="stylesheet" href="../styles.css">
+
+</head>
+
+
+<body>
+    <h1>Unidad 1: El Diodo de Unión PN</h1>
+    <nav>
+        <ul>
+
+
+
+
+
+
+
+            <li><a href="#" onclick="showSection('introduccion')">1.1 Introducción al curso</a></li>
+            <li><a href="#" onclick="showSection('diodo-ideal')">1.2 Diodo ideal</a></li>
+            <li><a href="#" onclick="showSection('diodo-elemento-circuitos')">1.3 El diodo como elemento de
+                    circuitos</a></li>
+            <li><a href="#" onclick="showSection('aplicaciones-diodo')">1.4 Aplicaciones del diodo</a></li>
+            <li><a href="#" onclick="showSection('rectificador')">1.5 El diodo como dispositivo rectificador</a></li>
+            <li><a href="#" onclick="showSection('especificaciones')">1.6 Especificaciones Técnicas de los Diodos
+                    Rectificadores</a></li>
+            <li><a href="#" onclick="showSection('zener')">1.7 El diodo Zener</a></li>
+            <li><a href="#" onclick="showSection('fuente-con-CI')">1.8 Fuente de alimentación regulada con CI</a></li>
+            <li><a href="#" onclick="showSection('led')">1.9 Diodo emisor de luz</a></li>
+            <!-- Agrega otros enlaces aquí -->
+        </ul>
+    </nav>
+
+
+
+
+
+    <div id="introduccion" class="section-content">
+        <h2>1.1 Introducción al curso</h2>
+        <p> Bienvenidos al curso de "Fundamentos y Aplicaciones de Electrónica", un curso diseñado para proporcionar
+            una comprensión sólida de los principios básicos de la electrónica y sus diversas aplicaciones en el mundo
+            real.</p>
+
+        <p>La electrónica es una disciplina fundamental en la ingeniería y la tecnología moderna, con aplicaciones que
+            van desde dispositivos electrónicos cotidianos hasta sistemas complejos en industrias avanzadas. En este
+            curso, exploraremos los principios esenciales que rigen el funcionamiento de los componentes electrónicos y
+            cómo estos principios se aplican para resolver problemas prácticos.</p>
+
+
+        <p> El curso está estructurado para ofrecer una combinación de teoría y práctica. A través de videos,
+            ejercicios prácticos y proyectos, tendrás la oportunidad de aplicar los conceptos aprendidos en situaciones
+            reales. Nuestro objetivo es que desarrolles habilidades tanto en el análisis teórico, diseño así como en la
+            implementación práctica de circuitos electrónicos.</p>
+
+        <p> Estamos emocionados de acompañarte en este viaje hacia el dominio de la electrónica, una disciplina que
+            impulsa la innovación y la tecnología en el mundo moderno. Prepárate para adquirir conocimientos valiosos
+            que te permitirán enfrentar desafíos técnicos y contribuir al avance de la tecnología. </p>
+
+
+
+        <p>Esperamos que participes activamente en el curso. </p>
+
+    </div>
+
+    <div id="diodo-ideal" class="section-content">
+        <h2>1.2 Diodo ideal: principio de funcionamiento</h2>
+
+
+        <div style="text-align: center;">
+            <iframe width="1536" height="864" src="https://miro.com/app/board/uXjVKfPDEBc=/?share_link_id=970424142247"
+                frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write"
+                allowfullscreen></iframe>
+        </div>
+
+
+        <p> </p>
+
+        <!-- Texto adicional -->
+        <p>Un diodo es un dispositivo semiconductor de dos terminales llamados ánodo y cátodo, que permite el paso de la
+            corriente en una única dirección, de ánodo a cátodo. A continuación se muestra un encapsulado de la serie
+            1N4000, así como el símbolo esquemático.</p>
+
+        <div style="text-align: center;">
+            <!-- Imagen del diodo -->
+            <img src="images/diodo1.jpg" alt="Dibujo del diodo" style="width: 200; height: 100; text-align: center">
+        </div>
+
+    </div>
+
+
+    <div id="diodo-elemento-circuitos" class="section-content">
+        <h2>1.3 El diodo como elemento de circuitos</h2>
+        <p>1.3.1 El diodo Real. Material Semiconductor tipo p y tipo n. Construcción del diodo Real Característica
+            Tensión – Corriente de un diodo real</p>
+        <p>1.3.2 Característica Tensión – Corriente de un diodo real</p>
+        <p>Revisa la siguiente página: <a href="http://labcloud.pucp.edu.pe/1IEE26/DIODO_FUNCIONAMIENTO.html"
+                target="_blank">Construcción y Curva real</a>.</p>
+
+        <p>1.3.3 Concepto de recta de carga de corriente continua</p>
+        <p>1.3.4 Determinación del punto de reposo del diodo:</p>
+        <p>1.3.5 Modelos lineales del diodo (para gran señal y continua)</p>
+        <p>Revisa la siguiente página: <a href="http://labcloud.pucp.edu.pe/1IEE26/DIODO_POLARIZACION.html"
+                target="_blank">Concepto de Recta de Carga</a>.</p>
+    </div>
+
+
+    <div id="aplicaciones-diodo" class="section-content">
+        <h2>1.4 Aplicaciones del diodo</h2>
+        <p>El diodo tiene múltiples aplicaciones, entre ellas nombramos: rectificador, recortador, protección contra
+            inversión de polaridad, etc.</p>
+
+
+        <h3>1.4.1 Rectificador</h3>
+        <!-- Texto adicional -->
+        <p>Se conoce como rectificación al proceso de convertir una señal alterna en una señal DC. Existen
+            rectificadores de media onda y de onda completa.</p>
+
+        <!-- Imagen del recortador de onda -->
+        <img src="images/aplicacionrectificador.png" alt="Dibujo del diodo" style="max-width: 40%; height: auto;">
+
+        <h3>1.4.2 Compuerta AND y OR</h3>
+        <p>Se puede implementar con diodos el comportamiento de una compuerta AND y OR.</p>
+
+        <!-- Imagen del recortador de onda -->
+        <p>Compuerta AND</p>
+        <img src="images/AND.png" alt="Dibujo del diodo" style="max-width: 40%; height: auto;">
+
+        <p>Compuerta OR</p>
+        <img src="images/or.png" alt="Dibujo del diodo" style="max-width: 40%; height: auto;">
+
+
+
+
+        <h3>1.4.3 Recortador de Onda</h3>
+        <p>Usado para limitar el rango de una señal en un circuito.</p>
+
+        <!-- Imagen del recortador de onda -->
+        <img src="images/figurarecortadordeonda.png" alt="Dibujo del diodo" style="max-width: 40%; height: auto;">
+
+
+        <!-- Línea Horizontal -->
+        <hr class="divider">
+
+        <!-- Primera fila de columnas -->
+        <div class="row">
+            <div class="column">
+                <h3>1.4.3 Circuito Recortador de Onda</h3>
+                <p> </p>
+                <!-- Imagen del recortador de onda -->
+                <img src="images/Recortador de onda.png" alt="Dibujo del diodo" style="max-width: 100%; height: auto;">
+
+
+                <div class="container">
+                    <h1> </h1>
+                    <div class="file-download">
+                        <a href="images/1IEE29 Recortador de Onda.pdsprj" download>Descargar Archivo de Proteus</a>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+            <div class="column">
+                <h2> </h2>
+                <p> </p>
+
+                <div class="container">
+                    <h1>Análisis del Recortador</h1>
+                    <div class="form-group">
+                        <label for="Vipico">Vipico (V):</label>
+                        <input type="number" id="Vipico" placeholder="Ingrese el valor de Vipico (V)">
+                    </div>
+                    <div class="form-group">
+                        <label for="V2">V2 (V):</label>
+                        <input type="number" id="V2" placeholder="Ingrese el valor de V2 (mayor que V1) (V)">
+                    </div>
+                    <div class="form-group">
+                        <label for="V1">V1 (V):</label>
+                        <input type="number" id="V1" placeholder="Ingrese el valor de V1 (menor que V2) (V)">
+                    </div>
+                    <div class="form-group">
+                        <label for="R1ap">R1 (kΩ):</label>
+                        <input type="number" id="R1ap" placeholder="Ingrese el valor de R1 (kΩ)">
+                    </div>
+
+
+                    <div class="form-group">
+                        <button onclick="calcularIDmax()">Calcular</button>
+                    </div>
+                    <div class="result" id="result"></div>
+                </div>
+
+
+
+                <div class="output-box">
+                    <p id="resultadoID1max">ID1max: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultadoID2max">ID2max: --</p>
+                </div>
+
+
+            </div>
+            <div class="column">
+                <h2> </h2>
+                <p> </p>
+
+                <div class="container">
+                    <h1>Diseño en Recortador</h1>
+                    <div class="form-group">
+                        <label for="Vipicod">Vipico (V):</label>
+                        <input type="number" id="Vipicod" placeholder="Ingrese el valor de Vipico (V)">
+                    </div>
+                    <div class="form-group">
+                        <label for="V2d">V2 (V):</label>
+                        <input type="number" id="V2d" placeholder="Ingrese el valor de V2 (mayor que V1) (V)">
+                    </div>
+                    <div class="form-group">
+                        <label for="V1d">V1 (V):</label>
+                        <input type="number" id="V1d" placeholder="Ingrese el valor de V1 (menor que V2) (V)">
+                    </div>
+                    <div class="form-group">
+                        <label for="IDmaxd">IDmax (mA):</label>
+                        <input type="number" id="IDmaxd" placeholder="Ingrese el valor de IDmax (mA)">
+                    </div>
+
+
+                    <div class="form-group">
+                        <button onclick="calcularR1paraIDmax()">Calcular</button>
+                    </div>
+                    <div class="result" id="result"></div>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultadoR1d">R1: --</p>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <h3>1.4.4 Diodo de Carrera Libre (Flyback diode o Freewheel diode)</h3>
+        <p>El motor es un elemento inductivo, y en todo elemento inductivo, la corriente no puede cambiar de manera
+            drástica. Lo mismo sucede con la
+            bobina de un relé. En el circuito de
+            la
+            figura que contiene la bobina de un relé (con su resistencia ) y un switch, cuando el switch está cerrado,
+            circula corriente por la bobina
+            y al abrirse se está cambiando la corriente de una manera drástica, por tanto en los terminales del
+            switch
+            aparecerá un arco eléctrico, que dañará los contactos de este elemento. Para evitar esta situación, se
+            coloca un diodo tal como se muestra en la siguiente figura, de tal manera que cuando el switch está cerrado,
+            circula corriente por la bobina y no por el diodo. Al abrirse el switch, la corriente que circula por la
+            bobina del
+            relé, circulará por el diodo, descargando la energía almacenada en este elemento inductivo y evitando
+            dañar los contactos del switch. En posteriores capítulos se observará que se usará un interruptor
+            electrónico como un transistor, de tal forma que el diodo protegerá al transistor de un alto voltaje</p>
+
+
+        <div style="text-align: left;"></div>
+        <h3>sin Diodo</h3>
+        <img src="images/sindiodo.gif" alt="GIF del diodo" class="gif-dibujo" ;
+            style="display: block; margin: 0 auto; width: 35%; height: auto;">
+
+        <hr>
+
+        <h3>con Diodo</h3>
+        <img src="images/condiodo.gif" alt="GIF del diodo" class="gif-dibujo" ;
+            style="display: block; margin: 0 auto; width: 35%; height: auto;">
+
+
+            <div class="container">
+                <h1> </h1>
+                <div class="file-download">
+                    <a href="images/1IEE29 Freewheeling Diode.pdsprj" download>Descargar Archivo de Proteus</a>
+                </div>
+            </div>
+
+
+
+
+    </div>
+
+    <div id="rectificador" class="section-content">
+        <h2>1.5 El diodo como dispositivo rectificador</h2>
+
+
+        <div style="text-align: center;">
+            <iframe width="768" height="432" src="https://miro.com/app/board/uXjVKfPDEBc=/?share_link_id=612087637903"
+                frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write"
+                allowfullscreen></iframe>
+        </div>
+
+
+
+        <p> </p>
+
+        <!-- Texto adicional -->
+        <p> </p>
+
+
+
+        <!-- Primera fila de columnas -->
+        <div class="row">
+            <div class="column">
+                <h3>Rectificador de Media Onda con Filtro Capacitivo en la salida</h3>
+                <p> </p>
+                <!-- Imagen del recortador de onda -->
+                <img src="images/rectificadordemediaonda.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+
+
+                <style>
+                    .file-download {
+                        margin-top: 20px;
+                        text-align: center;
+                    }
+
+                    .file-download a {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        color: white;
+                        background-color: #007bff;
+                        text-decoration: none;
+                        border-radius: 5px;
+                    }
+
+                    .file-download a:hover {
+                        background-color: #0056b3;
+                    }
+                </style>
+
+
+                <div class="container">
+                    <h1> </h1>
+                    <div class="file-download">
+                        <a href="images/1IEE29 Rectificador de Media Onda con Filtro.pdsprj" download>Descargar Archivo de Proteus</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+
+                <!-- Formulario para el analisis en la segunda columna -->
+                <style>
+                    .container {
+                        background: #fff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        width: 300px;
+                        margin-bottom: 20px;
+                    }
+
+                    .form-group {
+                        margin-bottom: 15px;
+                    }
+
+                    .form-group label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    .form-group input {
+                        width: 100%;
+                        padding: 8px;
+                        box-sizing: border-box;
+                    }
+
+                    .form-group button {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+
+                    .result {
+                        margin-top: 15px;
+                        font-size: 18px;
+                    }
+                </style>
+
+                <div class="container">
+                    <h1>Análisis</h1>
+                    <div class="form-group">
+                        <label for="vimoc">Vi (rms):</label>
+                        <input type="number" id="vimoc" placeholder="Ingrese el valor de Vi (rms)">
+                    </div>
+                    <div class="form-group">
+                        <label for="fmoc">f (Hz):</label>
+                        <input type="number" id="fmoc" placeholder="Ingrese el valor de f (Hz)">
+                    </div>
+                    <div class="form-group">
+                        <label for="nmoc">n:</label>
+                        <input type="number" id="nmoc" placeholder="Ingrese el valor de n">
+                    </div>
+                    <div class="form-group">
+                        <label for="Cmoc">C (uF):</label>
+                        <input type="number" id="Cmoc" placeholder="Ingrese el valor de C (uF)">
+                    </div>
+                    <div class="form-group">
+                        <label for="RLmoc">RL (Ohmios):</label>
+                        <input type="number" id="RLmoc" placeholder="Ingrese el valor de RL (ohmios)">
+                    </div>
+
+                    <div class="form-group">
+                        <button onclick="calcularmediaondaconc()">Calcular</button>
+                    </div>
+                    <div class="result" id="result"></div>
+                </div>
+
+
+                <div class="output-box">
+                    <p id="resultado1moc">VRLmax: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado2moc">IDC: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado3moc">VDC: --</p>
+                </div>
+                <div class="output-box">
+                    <p id="resultado4moc">Vrizado: --</p>
+                </div>
+                <div class="output-box">
+                    <p id="resultado5moc">IDC en diodo: --</p>
+                </div>
+
+
+            </div>
+            <div class="column">
+
+
+                <!-- Formulario para el diseño en la tercera columna -->
+                <style>
+                    .container {
+                        background: #fff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        width: 300px;
+                        margin-bottom: 20px;
+                    }
+
+                    .form-group {
+                        margin-bottom: 15px;
+                    }
+
+                    .form-group label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    .form-group input {
+                        width: 100%;
+                        padding: 8px;
+                        box-sizing: border-box;
+                    }
+
+                    .form-group button {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+
+                    .result {
+                        margin-top: 15px;
+                        font-size: 18px;
+                    }
+                </style>
+
+
+                <div class="container">
+                    <h1>Diseño</h1>
+                    <div class="form-group">
+                        <label for="vimocd">Vi (rms):</label>
+                        <input type="number" id="vimocd" placeholder="Ingrese el valor de Vi (rms)">
+                    </div>
+                    <div class="form-group">
+                        <label for="fmocd">f (Hz):</label>
+                        <input type="number" id="fmocd" placeholder="Ingrese el valor de f (Hz)">
+                    </div>
+                    <div class="form-group">
+                        <label for="VDCmocd">VDC (V):</label>
+                        <input type="number" id="VDCmocd" placeholder="Ingrese el valor de VDC">
+                    </div>
+                    <div class="form-group">
+                        <label for="RLmocd">RL (ohmios):</label>
+                        <input type="number" id="RLmocd" placeholder="Ingrese el valor de RL (ohmios)">
+                    </div>
+                    <div class="form-group">
+                        <label for="Vrizadomocd">Vrizado (V):</label>
+                        <input type="number" id="Vrizadomocd" placeholder="Asuma el Vrizado (V)">
+                    </div>
+
+                    <div class="form-group">
+                        <button onclick="calcularmediaondaconcd()">Calcular</button>
+                    </div>
+                    <div class="result" id="result"></div>
+                </div>
+
+
+                <div class="output-box">
+                    <p id="resultado1mocd">n: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado2mocd">C (uF): --</p>
+                </div>
+
+
+            </div>
+        </div>
+
+        <p> </p>
+        <hr>
+        <p> </p>
+
+
+        <!-- Segunda fila de columnas -->
+        <div class="row">
+            <div class="column">
+                <h3>Rectificador de Onda Completa con Transformador de Toma Central con Filtro Capacitivo en la salida
+                </h3>
+                <p> </p>
+                <!-- Imagen del recortador de onda -->
+                <img src="images/rectificadortomacentral.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+
+
+
+
+
+                <style>
+                    .file-download {
+                        margin-top: 20px;
+                        text-align: center;
+                    }
+
+                    .file-download a {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        color: white;
+                        background-color: #007bff;
+                        text-decoration: none;
+                        border-radius: 5px;
+                    }
+
+                    .file-download a:hover {
+                        background-color: #0056b3;
+                    }
+                </style>
+
+
+                <div class="container">
+                    <h1> </h1>
+                    <div class="file-download">
+                        <a href="images/1IEE29 Rectificador de Onda Completa con Transformador TomaCentral con Filtro.pdsprj" download>Descargar Archivo de Proteus</a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="column">
+
+                <!-- Formulario para el analisis en la segunda columna -->
+                <style>
+                    .container {
+                        background: #fff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        width: 300px;
+                        margin-bottom: 20px;
+                    }
+
+                    .form-group {
+                        margin-bottom: 15px;
+                    }
+
+                    .form-group label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    .form-group input {
+                        width: 100%;
+                        padding: 8px;
+                        box-sizing: border-box;
+                    }
+
+                    .form-group button {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+
+                    .result {
+                        margin-top: 15px;
+                        font-size: 18px;
+                    }
+                </style>
+
+
+                <div class="container">
+                    <h1>Análisis </h1>
+                    <div class="form-group">
+                        <label for="virmsoct">Vi (rms):</label>
+                        <input type="number" id="virmsoct" placeholder="Ingrese el valor de Vi (rms)">
+                    </div>
+                    <div class="form-group">
+                        <label for="foct">f (Hz):</label>
+                        <input type="number" id="foct" placeholder="Ingrese el valor de f (Hz)">
+                    </div>
+                    <div class="form-group">
+                        <label for="noct">n:</label>
+                        <input type="number" id="noct" placeholder="Ingrese el valor de n">
+                    </div>
+                    <div class="form-group">
+                        <label for="Coct">C (uF):</label>
+                        <input type="number" id="Coct" placeholder="Ingrese el valor de C (uF)">
+                    </div>
+                    <div class="form-group">
+                        <label for="RLoct">RL (Ohmios):</label>
+                        <input type="number" id="RLoct" placeholder="Ingrese el valor de RL (ohmios)">
+                    </div>
+
+                    <div class="form-group">
+                        <button onclick="calcularondacompletaconc()">Calcular</button>
+                    </div>
+                    <div class="result" id="result"></div>
+                </div>
+
+
+                <div class="output-box">
+                    <p id="resultado1oct">VRLmax: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado2oct">IDC: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado3oct">VDC: --</p>
+                </div>
+                <div class="output-box">
+                    <p id="resultado4oct">Vrizado: --</p>
+                </div>
+                <div class="output-box">
+                    <p id="resultado5oct">IDC en diodo: --</p>
+                </div>
+
+            </div>
+            <div class="column">
+
+
+                <!-- Formulario para el diseño en la tercera columna -->
+                <style>
+                    .container {
+                        background: #fff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        width: 300px;
+                        margin-bottom: 20px;
+                    }
+
+                    .form-group {
+                        margin-bottom: 15px;
+                    }
+
+                    .form-group label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    .form-group input {
+                        width: 100%;
+                        padding: 8px;
+                        box-sizing: border-box;
+                    }
+
+                    .form-group button {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+
+                    .result {
+                        margin-top: 15px;
+                        font-size: 18px;
+                    }
+                </style>
+
+                <div class="container">
+                    <h1>Diseño</h1>
+                    <div class="form-group">
+                        <label for="vioctd">Vi (rms):</label>
+                        <input type="number" id="vioctd" placeholder="Ingrese el valor de Vi (rms)">
+                    </div>
+                    <div class="form-group">
+                        <label for="foctd">f (Hz):</label>
+                        <input type="number" id="foctd" placeholder="Ingrese el valor de f (Hz)">
+                    </div>
+                    <div class="form-group">
+                        <label for="VDCoctd">VDC (V):</label>
+                        <input type="number" id="VDCoctd" placeholder="Ingrese el valor de VDC">
+                    </div>
+                    <div class="form-group">
+                        <label for="RLoctd">RL (ohmios):</label>
+                        <input type="number" id="RLoctd" placeholder="Ingrese el valor de RL (ohmios)">
+                    </div>
+                    <div class="form-group">
+                        <label for="Vrizadooctd">Vrizado (V):</label>
+                        <input type="number" id="Vrizadooctd" placeholder="Asuma el Vrizado (V)">
+                    </div>
+
+                    <div class="form-group">
+                        <button onclick="calcularondacompletatconcd()">Calcular</button>
+                    </div>
+                    <div class="result" id="result"></div>
+                </div>
+
+
+                <div class="output-box">
+                    <p id="resultado1octd">n: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado2octd">C (uF): --</p>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+        <p> </p>
+        <hr>
+        <p> </p>
+
+
+        <!-- Tercera fila de columnas -->
+        <div class="row">
+            <div class="column">
+                <h3>Rectificador de Onda Completa tipo Puente con Filtro Capacitivo en la salida</h3>
+                <p> </p>
+                <!-- Imagen del rectificador de onda -->
+                <img src="images/rectificadorpuente.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+
+
+
+
+
+                <style>
+                    .file-download {
+                        margin-top: 20px;
+                        text-align: center;
+                    }
+
+                    .file-download a {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        color: white;
+                        background-color: #007bff;
+                        text-decoration: none;
+                        border-radius: 5px;
+                    }
+
+                    .file-download a:hover {
+                        background-color: #0056b3;
+                    }
+                </style>
+
+
+                <div class="container">
+                    <h1> </h1>
+                    <div class="file-download">
+                        <a href="images/1IEE29 Rectificador de Onda Completa tipo Puente Onda con Filtro.pdsprj" download>Descargar Archivo de Proteus</a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="column">
+
+                <!-- Formulario para el analisis en la segunda columna -->
+                <style>
+                    .container {
+                        background: #fff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        width: 300px;
+                        margin-bottom: 20px;
+                    }
+
+                    .form-group {
+                        margin-bottom: 15px;
+                    }
+
+                    .form-group label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    .form-group input {
+                        width: 100%;
+                        padding: 8px;
+                        box-sizing: border-box;
+                    }
+
+                    .form-group button {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+
+                    .result {
+                        margin-top: 15px;
+                        font-size: 18px;
+                    }
+                </style>
+
+                <div class="container">
+                    <h1>Análisis </h1>
+                    <div class="form-group">
+                        <label for="virmsocp">Vi (rms):</label>
+                        <input type="number" id="virmsocp" placeholder="Ingrese el valor de Vi (rms)">
+                    </div>
+                    <div class="form-group">
+                        <label for="focp">f (Hz):</label>
+                        <input type="number" id="focp" placeholder="Ingrese el valor de f (Hz)">
+                    </div>
+                    <div class="form-group">
+                        <label for="nocp">n:</label>
+                        <input type="number" id="nocp" placeholder="Ingrese el valor de n">
+                    </div>
+                    <div class="form-group">
+                        <label for="Cocp">C (uF):</label>
+                        <input type="number" id="Cocp" placeholder="Ingrese el valor de C (uF)">
+                    </div>
+                    <div class="form-group">
+                        <label for="RLocp">RL (Ohmios):</label>
+                        <input type="number" id="RLocp" placeholder="Ingrese el valor de RL (ohmios)">
+                    </div>
+
+                    <div class="form-group">
+                        <button onclick="calcularondacompletapconc()">Calcular</button>
+                    </div>
+                    <div class="result" id="result"></div>
+                </div>
+
+
+                <div class="output-box">
+                    <p id="resultado1ocp">VRLmax: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado2ocp">IDC: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado3ocp">VDC: --</p>
+                </div>
+                <div class="output-box">
+                    <p id="resultado4ocp">Vrizado: --</p>
+                </div>
+                <div class="output-box">
+                    <p id="resultado5ocp">IDC en diodo: --</p>
+                </div>
+
+            </div>
+            <div class="column">
+
+
+                <!-- Formulario para el diseño en la tercera columna -->
+                <style>
+                    .container {
+                        background: #fff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        width: 300px;
+                        margin-bottom: 20px;
+                    }
+
+                    .form-group {
+                        margin-bottom: 15px;
+                    }
+
+                    .form-group label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    .form-group input {
+                        width: 100%;
+                        padding: 8px;
+                        box-sizing: border-box;
+                    }
+
+                    .form-group button {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+
+                    .result {
+                        margin-top: 15px;
+                        font-size: 18px;
+                    }
+                </style>
+
+                <div class="container">
+                    <h1>Diseño</h1>
+                    <div class="form-group">
+                        <label for="viocpd">Vi (rms):</label>
+                        <input type="number" id="viocpd" placeholder="Ingrese el valor de Vi (rms)">
+                    </div>
+                    <div class="form-group">
+                        <label for="focpd">f (Hz):</label>
+                        <input type="number" id="focpd" placeholder="Ingrese el valor de f (Hz)">
+                    </div>
+                    <div class="form-group">
+                        <label for="VDCocpd">VDC (V):</label>
+                        <input type="number" id="VDCocpd" placeholder="Ingrese el valor de VDC">
+                    </div>
+                    <div class="form-group">
+                        <label for="RLocpd">RL (ohmios):</label>
+                        <input type="number" id="RLocpd" placeholder="Ingrese el valor de RL (ohmios)">
+                    </div>
+                    <div class="form-group">
+                        <label for="Vrizadoocpd">Vrizado (V):</label>
+                        <input type="number" id="Vrizadoocpd" placeholder="Asuma el Vrizado (V)">
+                    </div>
+
+                    <div class="form-group">
+                        <button onclick="calcularondacompletapconcd()">Calcular</button>
+                    </div>
+                    <div class="result" id="result"></div>
+                </div>
+
+
+                <div class="output-box">
+                    <p id="resultado1ocpd">n: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado2ocpd">C (uF): --</p>
+                </div>
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="especificaciones" class="section-content">
+        <h2>1.6 Especificaciones técnicas de los diodos</h2>
+        <p> </p>
+
+        <!-- Texto adicional -->
+        <p>VALORES MÁXIMOS
+
+            Son aquellos valores que no deben ser superados para evitar que el dispositivo se dañe.</p>
+
+
+        <p> Voltaje inverso de ruptura
+
+            Revisaremos la hoja de características del diodo 1N4001.
+
+            La serie de diodos del 1N4001 al 1N4007 son siete diodos que tienen las mismas características con
+            polarización directa, pero en polarización inversa sus características son distintas.
+
+            Primeramente analizaremos las "Limitaciones máximas" que son estas:</p>
+
+        <!-- Imagen del diodo -->
+        <img src="images/especificaciones1.png" alt="Dibujo del diodo" style="width: 200; height: 100;">
+
+        <p>
+            Maximum repetitive peak reverse voltaje: Voltaje inverso repetitivo pico
+
+            Maximum RMS voltaje: máximo voltaje inverso que puede soportar el diodo, expresado en rms.
+
+            Maximum DC blocking voltaje: máximo voltaje inverso DC que puede soportar el diodo.
+
+            Estos tres valores especifican la ruptura en ciertas condiciones de funcionamiento. Lo importante es
+            saber
+            que la tensión de ruptura para el diodo es de 50 V, independientemente de cómo se use el diodo. Esta
+            ruptura
+            se produce por la avalancha y en el 1N4001 esta ruptura es normalmente destructiva.
+
+            **Corriente máxima con polarización directa**
+
+            En la hoja de datos encontraremos el valor máximo de la corriente media (también llamada promedio, DC o
+            average): </p>
+
+
+
+        <img src="images/especificaciones2.png" alt="Dibujo del diodo" style="width: 200; height: 100;">
+
+
+        <p>Esto indica que el 1N4001 puede soportar hasta 1 A con polarización directa cuando se le emplea como
+            rectificador. Esto es, 1 A es el nivel de corriente con polarización directa para el cual el diodo se
+            quema
+            debido a una disipación excesiva de potencia. Un diseño fiable, con factor de seguridad 1, debe
+            garantizar
+            que la corriente con polarización directa sea menor de 0,5 A en cualquier condición de funcionamiento.
+
+            Los estudios de las averías de los dispositivos muestran que la vida de éstos es tanto más corta cuanto
+            más
+            cerca trabajen de las limitaciones máximas. Por esta razón, algunos diseñadores emplean factores de
+            seguridad hasta de 10:1, para 1N4001 será de 0,1 A o menos.
+
+            El valor  máximo de esta corriente depende de la temperatura, tal como se muestra en la siguiente
+            gráfica.
+        </p>
+
+        <img src="images/especificaciones3.png" alt="Dibujo del diodo" style="width: 200; height: 100;">
+
+
+        <p>**Corriente máxima directa de pico no repetitivo, IFSM.**
+
+            Están definidas para corrientes senoidales, medio ciclo, de un determinado ancho de tiempo. Estás
+            suceden en
+            el encendido inicial del circuito. En un circuito rectificador con filtro capacitivo, al estar
+            inicialmente
+            descargado, actúa como un cortocircuito, por lo tanto la corriente inicial de carga puede llegar a ser
+            bastante alta. Según el número de picos no repetitivos que aparezcan se puede obtener mediante la
+            siguiente
+            gráfica, cuál es el máximo valor de este pico de corriente no repetitivo.
+        </p>
+
+
+        <img src="images/especificaciones4.png" alt="Dibujo del diodo" style="width: 200; height: 100;">
+
+
+        <p> **CARACTERÍSTICAS ELÉCTRICAS**
+
+            **Caída de voltaje con polarización directa**
+
+            Otro dato importante es la caída de tensión con polarización directa:</p>
+
+
+
+        <img src="images/especificaciones5.png" alt="Dibujo del diodo" style="width: 200; height: 100;">
+
+
+        <p> El 1N4001 tiene una caída de voltaje con polarización directa de 0.93 V cuando la corriente es de 1A y
+            la
+            temperatura de la unión es de 25 ºC.
+
+            También se tiene el voltaje en el diodo para una corriente específica. Estos valores están medidos en
+            alterna, y por ello aparece la palabra instantáneo en la especificación. Se muestra una gráfica a
+            continuación que indica como varía VF@IF.
+
+        </p>
+        <img src="images/especificaciones6.png" alt="Dibujo del diodo" style="width: 200; height: 100;">
+
+        <p> **Corriente inversa máxima**
+
+            En esta tabla está la corriente con polarización inversa.</p>
+
+
+        <img src="images/especificaciones7.png" alt="Dibujo del diodo" style="width: 200; height: 100;">
+
+        <p>
+            Esta corriente inversa incluye la corriente producida térmicamente y la corriente de fugas superficial.
+            De
+            esto deducimos que la temperatura puede ser importante a la hora del diseño, ya que un diseño basado en
+            una
+            corriente inversa de 5μA trabajará muy bien a 25 °C con un 1N4001 típico, pero puede fallar si tiene que
+            funcionar en medios donde la temperatura de la unión alcance los 100 °C.
+
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="zener" class="section-content">
+        <h2>1.7 El Diodo zener</h2>
+
+        <div style="text-align: center;">
+            <iframe width="768" height="432" src="https://miro.com/app/board/uXjVKtfiP5Q=/?share_link_id=230217610298"
+                frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write"
+                allowfullscreen></iframe>
+        </div>
+
+
+        <!-- Texto adicional -->
+        <p>Un diodo zener es un dispositivo semiconductor de dos terminales que mantiene el voltaje en sus
+            terminales
+            siempre que la corriente que circula por el zener se encuentre dentro del rango IZmin hasta IZmax.
+        </p>
+
+        <!-- Imagen del diodo zener-->
+        <div style="text-align: center;">
+            <img src="images/zener.png" alt="Descripción de la imagen"
+                style="display: inline-block; max-width: 15%; height: auto;">
+        </div>
+
+
+        <div class="row">
+            <div class="column">
+
+                <div style="text-align: center;">
+                    <img src="images/zener1.png" alt="Descripción de la imagen"
+                        style="display: inline-block; max-width: 100%; height: auto;">
+                </div>
+
+                <!-- Formulario para calcular el IZ e IRL -->
+
+                <style>
+                    .container {
+                        background: #fff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        width: 300px;
+                        margin-bottom: 20px;
+                    }
+
+                    .form-group {
+                        margin-bottom: 15px;
+                    }
+
+                    .form-group label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    .form-group input {
+                        width: 100%;
+                        padding: 8px;
+                        box-sizing: border-box;
+                    }
+
+                    .form-group button {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+
+                    .result {
+                        margin-top: 15px;
+                        font-size: 18px;
+                    }
+                </style>
+            </div>
+            <div class="column">
+                <h1>Análisis</h1>
+                <div class="form-group">
+
+                    <label for="VS">VS (V):</label>
+                    <input type="number" id="VS" placeholder="Ingrese el valor de VS (V)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="VZ">VZ (V):</label>
+                    <input type="number" id="VZ" placeholder="Ingrese el valor de VZ (V)" />
+                </div>
+
+
+                <div class="form-group">
+                    <label for="RS">RS (kΩ):</label>
+                    <input type="number" id="RS" placeholder="Ingrese el valor de RS (kΩ)" />
+                </div>
+
+                <div class="form-group">
+                    <label for="RLoad">RLoad (kΩ):</label>
+                    <input type="number" id="RLoad" placeholder="Ingrese el valor de RL (kΩ)" />
+                </div>
+
+                <div class="form-group">
+                    <button onclick="calcularZENER()">Calcular</button>
+                </div>
+                <div class="result" id="result"></div>
+
+
+                <div class="output-box">
+                    <p id="resultadoZENER1">IS: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultadoZENER2">IL: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultadoZENER3">IZ: --</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <div id="fuente-con-CI" class="section-content">
+        <h2>1.8 Fuente de alimentación regulada con circuito integrado</h2>
+        <p> </p>
+
+        <!-- Texto adicional -->
+        <p>Un regulador de voltaje es un circuito que entrega un voltaje fijo en su salida, siempre que el voltaje
+            de
+            entrada se encuentre dentro de cierto rango y la corriente de salida sea menor al máximo valor que
+            indica su
+            datasheet.</p>
+
+
+        <!-- Primera fila de columnas -->
+        <div class="row">
+            <div class="column">
+                <h3>Fuente de alimentación regulada con circuito integrado</h3>
+                <p> </p>
+                <!-- Imagen de la fuetne regulada con CI -->
+                <img src="images/fuenteconci.png" alt="Dibujo del diodo" style="width: 100%; height: auto;">
+
+
+
+
+
+                <style>
+                    .file-download {
+                        margin-top: 20px;
+                        text-align: center;
+                    }
+
+                    .file-download a {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        color: white;
+                        background-color: #007bff;
+                        text-decoration: none;
+                        border-radius: 5px;
+                    }
+
+                    .file-download a:hover {
+                        background-color: #0056b3;
+                    }
+                </style>
+
+
+                <div class="container">
+                    <h1> </h1>
+                    <div class="file-download">
+                        <a href="images/1IEE29 Fuente Regulada con CI.pdsprj" download>Descargar Archivo de Proteus</a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="column">
+
+                <!-- Formulario para el analisis en la segunda columna -->
+                <style>
+                    .container {
+                        background: #fff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        width: 300px;
+                        margin-bottom: 20px;
+                    }
+
+                    .form-group {
+                        margin-bottom: 15px;
+                    }
+
+                    .form-group label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    .form-group input {
+                        width: 100%;
+                        padding: 8px;
+                        box-sizing: border-box;
+                    }
+
+                    .form-group button {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+
+                    .result {
+                        margin-top: 15px;
+                        font-size: 18px;
+                    }
+                </style>
+
+                <div class="container">
+                    <h1>Análisis</h1>
+                    <div class="form-group">
+                        <label for="vi">Vi (rms):</label>
+                        <input type="number" id="vi" placeholder="Ingrese el valor de Vi (RMS)">
+                    </div>
+                    <div class="form-group">
+                        <label for="f">f (Hz):</label>
+                        <input type="number" id="f" placeholder="Ingrese el valor de f (Hz)">
+                    </div>
+                    <div class="form-group">
+                        <label for="n">n:</label>
+                        <input type="number" id="n" placeholder="Ingrese el valor de n">
+                    </div>
+                    <div class="form-group">
+                        <label for="C">C (uF):</label>
+                        <input type="number" id="C" placeholder="Ingrese el valor de C (uF)">
+                    </div>
+                    <div class="form-group">
+                        <label for="Vout">Vout (V):</label>
+                        <input type="number" id="Vout" placeholder="Ingrese el valor de Vout (V)">
+                    </div>
+                    <div class="form-group">
+                        <label for="RL">RL (Ohmios):</label>
+                        <input type="number" id="RL" placeholder="Ingrese el valor de RL (ohmios)">
+                    </div>
+
+                    <div class="form-group">
+                        <button onclick="calcular()">Calcular</button>
+                    </div>
+                    <div class="result" id="result"></div>
+                </div>
+
+
+
+                <div class="output-box">
+                    <p id="resultado1">Vinmax: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado2">Vinmin: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado3">Vrizado: --</p>
+                </div>
+
+            </div>
+            <div class="column">
+
+
+                <!-- Formulario para el diseño en la tercera columna -->
+                <style>
+                    .container {
+                        background: #fff;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        width: 300px;
+                        margin-bottom: 20px;
+                    }
+
+                    .form-group {
+                        margin-bottom: 15px;
+                    }
+
+                    .form-group label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    .form-group input {
+                        width: 100%;
+                        padding: 8px;
+                        box-sizing: border-box;
+                    }
+
+                    .form-group button {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+
+                    .result {
+                        margin-top: 15px;
+                        font-size: 18px;
+                    }
+                </style>
+
+                <div class="container">
+                    <h1>Diseño</h1>
+                    <div class="form-group">
+                        <label for="Vout2">Vout (V):</label>
+                        <input type="number" id="Vout2" placeholder="Ingrese el valor de Vout (V)">
+                    </div>
+                    <div class="form-group">
+                        <label for="Iomax">Iomax (A):</label>
+                        <input type="number" id="Iomax" placeholder="Ingrese el valor de Iomax (A)">
+                    </div>
+                    <div class="form-group">
+                        <label for="Vac">Vi:</label>
+                        <input type="number" id="Vac" placeholder="Ingrese el valor de Vac(rms)">
+                    </div>
+                    <div class="form-group">
+                        <label for="f2">f (Hz):</label>
+                        <input type="number" id="f2" placeholder="Ingrese el valor de f (Hz)">
+                    </div>
+                    <div class="form-group">
+                        <label for="Vinmax">Vinmax (V):</label>
+                        <input type="number" id="Vinmax" placeholder="Asuma un valor de Vin max (V)">
+                    </div>
+                    <div class="form-group">
+                        <label for="Vinmin">Vinmin (V):</label>
+                        <input type="number" id="Vinmin" placeholder="Asuma un valor de Vin min (V)">
+                    </div>
+
+                    <div class="form-group">
+                        <button onclick="calcularFCI()">Calcular</button>
+                    </div>
+                    <div class="result" id="result"></div>
+                </div>
+
+
+
+                <div class="output-box">
+                    <p id="resultado1ci">n: --</p>
+                </div>
+
+                <div class="output-box">
+                    <p id="resultado2ci">C (uF): --</p>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+        <p> Para el correcto funcionamiento del regulador de voltaje, debe incluirse un par de capacitores, tal como se
+            muestra a continuación: </p>
+
+        <img src="images/capacitoresenLM78XX.png" alt="Dibujo del diodo" style="width: 40%; height: auto;">
+    </div>
+
+
+
+
+
+
+
+
+    <div id="led" class="section-content">
+        <h2>1.9 Diodo emisor de luz</h2>
+
+
+
+        <div style="text-align: center;">
+            <iframe width="768" height="432" src="https://miro.com/app/board/uXjVKvLlX60=/?share_link_id=25957613229"
+                frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write"
+                allowfullscreen></iframe>
+        </div>
+
+
+
+        <p>Contenido sobre el diodo LED.</p>
+
+
+        <!-- Texto adicional -->
+        <p>El principio de funcionamiento de un LED (diodo emisor de luz) se basa en la electroluminiscencia, que es
+            la
+            emisión de luz cuando una corriente eléctrica pasa a través de un material.</p>
+
+        <p>1. Material Semiconductor: Un LED está construido de un semiconductor que tiene una unión p-n. Esta unión
+            se
+            forma al unir dos tipos de materiales semiconductores: uno con exceso de electrones (tipo n) y otro con
+            déficit de electrones (tipo p).</p>
+
+        <p>2. Aplicación de Voltaje: Cuando se aplica un voltaje adecuado al LED, los electrones del material tipo n
+            y
+            los "huecos" (espacios donde faltan electrones) del material tipo p se encuentran en la unión p-n.</p>
+
+        <p>3. Recombinaión de Carga: Los electrones caen en los huecos, y al recombinarse, liberan energía en forma
+            de
+            fotones, que es la luz visible. La energía liberada depende del tipo de material semiconductor, lo que
+            determina el color del LED.</p>
+
+        <p>4. Emisión de Luz: La luz emitida por el LED es direccional, lo que significa que se emite en una sola
+            dirección, lo que lo hace más eficiente que las bombillas incandescentes, que emiten luz en todas
+            direcciones.</p>
+
+        <p>Por tanto, el LED convierte la energía eléctrica en luz mediante la recombinación de electrones y huecos
+            en
+            un material semiconductor.</p>
+
+
+        <!-- Imagen del diodo -->
+        <div style="text-align: center;"></div>
+        <img src="images/led1.jpg" alt="Dibujo del diodo"
+            style="display: block; margin: 0 auto; width: 25%; height: auto;">
+        <img src="images/led2.gif" alt="GIF del diodo" class="gif-dibujo" ;
+            style="display: block; margin: 0 auto; width: 25%; height: auto;">
+
+        <!-- Sección con el video de YouTube -->
+        <div class="video-section">
+            <p>
+
+
+
+
+
+            </p>
+
+
+            <h3 style="text-align: center;">Solución de Ejercicio</h3>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5COMvmPPaKg?si=84jlcESoQUPluLn0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                style="display: block; margin: 20px auto;"></iframe>
+        </div>
+
+
+
+
+        <script>
+
+
+            function showSection(sectionId) {
+                var sections = document.querySelectorAll('.section-content');
+                sections.forEach(function (section) {
+                    section.style.display = 'none';
+                });
+
+                var sectionToShow = document.getElementById(sectionId);
+                if (sectionToShow) {
+                    sectionToShow.style.display = 'block';
+                }
+            }
+
+            function calcular() {
+
+                var vi = document.getElementById('vi').value;
+                var f = document.getElementById('f').value;
+                var n = document.getElementById('n').value;
+                var C = document.getElementById('C').value;
+                var Vout = document.getElementById('Vout').value;
+                var RL = document.getElementById('RL').value;
+
+                // Verifica si los valores ingresados son válidos
+                if (n && vi && C && f && Vout) {
+                    var viRms = parseFloat(vi);
+                    var vMax = viRms * 1.4142 / n - 1.4;
+                    var IDC = Vout / RL;
+                    var Vrizado = IDC * 1000000 / (2 * f * C);
+                    var vMin = vMax - Vrizado;
+
+                    document.getElementById('resultado1').innerText = "Vmax: " + vMax.toFixed(2) + " V";
+                    document.getElementById('resultado2').innerText = "Vmin: " + vMin.toFixed(2) + " V";
+                    document.getElementById('resultado3').innerText = "Vrizado: " + Vrizado.toFixed(2) + " V";
+                } else {
+                    document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos para n y Vi.";
+                }
+            }
+
+
+            function calcularZENER() {
+
+                var VS = document.getElementById('VS').value;
+                var VZ = document.getElementById('VZ').value;
+                var RS = document.getElementById('RS').value;
+                var RLoad = document.getElementById('RLoad').value;
+
+                // Verifica si los valores ingresados son válidos
+                if (VS && VZ && RS && RL) {
+                    var VS = parseFloat(VS);
+                    var IS = (VS - VZ) / RS;
+                    var IRL = VZ / RLoad;
+                    var IZ = IS - IRL;
+
+                    document.getElementById('resultadoZENER1').innerText = "IS: " + IS.toFixed(2) + " mA";
+                    document.getElementById('resultadoZENER2').innerText = "IRL: " + IRL.toFixed(2) + " mA";
+                    document.getElementById('resultadoZENER3').innerText = "IZ: " + IZ.toFixed(2) + " mA";
+
+                } else {
+                    document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos para n y Vi.";
+                }
+            }
+
+
+            function calcularFCI() {
+
+                // Obtener los valores de entrada
+                var Vout2 = parseFloat(document.getElementById('Vout2').value);
+                var Iomax = parseFloat(document.getElementById('Iomax').value);
+                var Vac = parseFloat(document.getElementById('Vac').value);
+                var f2 = parseFloat(document.getElementById('f2').value);
+                var Vinmax = parseFloat(document.getElementById('Vinmax').value);
+                var Vinmin = parseFloat(document.getElementById('Vinmin').value);
+
+                // Verifica si los valores ingresados son válidos
+                if (!isNaN(Vout2) && !isNaN(Iomax) && !isNaN(Vac) && !isNaN(f2) && !isNaN(Vinmax) && !isNaN(Vinmin)) {
+
+                    // Validar Vinmax y Vinmin
+                    if (Vinmax > (Vout2 + 15)) {
+                        document.getElementById('resultado1ci').innerText = "Vinmax no puede ser mayor que Vout + 15.";
+                        return;
+                    }
+                    if (Vinmin < (Vout2 + 2.5)) {
+                        document.getElementById('resultado1ci').innerText = "Vinmin no puede ser menor que Vout + 2.5.";
+                        return;
+                    }
+
+                    var n2 = (Vac * 1.4142) / (Vinmax + 1.4);
+                    var C2 = (Iomax * 1000000) / (2 * f2 * (Vinmax - Vinmin));
+
+
+
+                    document.getElementById('resultado1ci').innerText = "n: " + n2.toFixed(2) + " ";
+                    document.getElementById('resultado2ci').innerText = "C: " + C2.toFixed(2) + " uF";
+
+                } else {
+                    document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos para n y Vi.";
+                }
+            }
+
+
+            function calcularmediaondaconc() {
+
+                var vimoc = document.getElementById('vimoc').value;
+                var fmoc = document.getElementById('fmoc').value;
+                var nmoc = document.getElementById('nmoc').value;
+                var Cmoc = document.getElementById('Cmoc').value;
+                var RLmoc = document.getElementById('RLmoc').value;
+
+                // Verifica si los valores ingresados son válidos
+                if (nmoc && vimoc && Cmoc && fmoc && RLmoc) {
+                    var virmsmoc = parseFloat(vimoc);
+                    var fmoc = parseFloat(fmoc);
+                    var nmoc = parseFloat(nmoc);
+                    var Cmoc = parseFloat(Cmoc);
+                    var RLmoc = parseFloat(RLmoc);
+
+                    var Vmaxmoc = virmsmoc * 1.4142 / nmoc - 0.7;
+                    var ZdeCmoc = 1000000 / (2 * fmoc * Cmoc);
+                    var IDCmoc = 1000 * Vmaxmoc / (ZdeCmoc + RLmoc);
+                    var VDCmoc = (IDCmoc / 1000) * RLmoc;
+                    var Vrizadomoc = 2 * (Vmaxmoc - VDCmoc);
+                    var IDCdiodomoc = IDCmoc;
+
+                    document.getElementById('resultado1moc').innerText = "Vmax: " + Vmaxmoc.toFixed(2) + " V";
+                    document.getElementById('resultado2moc').innerText = "IDC: " + IDCmoc.toFixed(2) + " mA";
+                    document.getElementById('resultado3moc').innerText = "VDC: " + VDCmoc.toFixed(2) + " V";
+                    document.getElementById('resultado4moc').innerText = "Vrizado: " + Vrizadomoc.toFixed(2) + " V";
+                    document.getElementById('resultado5moc').innerText = "IDCdiodo: " + IDCdiodomoc.toFixed(2) + " mA";
+                } else {
+                    document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos";
+                }
+            }
+
+
+            function calcularmediaondaconcd() {
+
+                var vimocd = document.getElementById('vimocd').value;
+                var fmocd = document.getElementById('fmocd').value;
+                var VDCmocd = document.getElementById('VDCmocd').value;
+                var RLmocd = document.getElementById('RLmocd').value;
+                var Vrizadomocd = document.getElementById('Vrizadomocd').value;
+
+                // Verifica si los valores ingresados son válidos
+                if (vimocd && fmocd && VDCmocd && RLmocd && Vrizadomocd) {
+                    var vimocd = parseFloat(vimocd);
+                    var fmocd = parseFloat(fmocd);
+                    var VDCmocd = parseFloat(VDCmocd);
+                    var RLmocd = parseFloat(RLmocd);
+                    var Vrizadomocd = parseFloat(Vrizadomocd);
+
+                    var nmocd = vimocd * 1.4142 / (VDCmocd + 0.7 + Vrizadomocd / 2);
+                    var Cmocd = (1000000 * VDCmocd / RLmocd) / (fmocd * Vrizadomocd);
+
+                    document.getElementById('resultado1mocd').innerText = "n: " + nmocd.toFixed(2) + " ";
+                    document.getElementById('resultado2mocd').innerText = "C: " + Cmocd.toFixed(2) + " uF";
+
+                } else {
+                    document.getElementById('resultado1mocd').innerText = "Por favor, ingrese valores válidos";
+                }
+            }
+
+
+
+
+
+
+
+
+
+            function calcularondacompletaconc() {
+
+                var virmsoct = document.getElementById('virmsoct').value;
+                var foct = document.getElementById('foct').value;
+                var noct = document.getElementById('noct').value;
+                var Coct = document.getElementById('Coct').value;
+                var RLoct = document.getElementById('RLoct').value;
+
+                // Verifica si los valores ingresados son válidos
+                if (noct && virmsoct && Coct && foct && RLoct) {
+                    var virmsoct = parseFloat(virmsoct);
+                    var foct = parseFloat(foct);
+                    var noct = parseFloat(noct);
+                    var Coct = parseFloat(Coct);
+                    var RLoct = parseFloat(RLoct);
+
+                    var Vmaxoct = virmsoct * 1.4142 / noct - 0.7;
+                    var ZdeCoct = 1000000 / (4 * foct * Coct);
+                    var IDCoct = 1000 * Vmaxoct / (ZdeCoct + RLoct);
+                    var VDCoct = (IDCoct / 1000) * RLoct;
+                    var Vrizadooct = 2 * (Vmaxoct - VDCoct);
+                    var IDCdiodooct = IDCoct / 2;
+
+                    document.getElementById('resultado1oct').innerText = "Vmax: " + Vmaxoct.toFixed(2) + " V";
+                    document.getElementById('resultado2oct').innerText = "IDC: " + IDCoct.toFixed(2) + " mA";
+                    document.getElementById('resultado3oct').innerText = "VDC: " + VDCoct.toFixed(2) + " V";
+                    document.getElementById('resultado4oct').innerText = "Vrizado: " + Vrizadooct.toFixed(2) + " V";
+                    document.getElementById('resultado5oct').innerText = "IDCdiodo: " + IDCdiodooct.toFixed(2) + " mA";
+                } else {
+                    document.getElementById('resultado1oct').innerText = "Por favor, ingrese valores válidos";
+                }
+            }
+
+
+
+            function calcularondacompletatconcd() {
+
+                var vioctd = document.getElementById('vioctd').value;
+                var foctd = document.getElementById('foctd').value;
+                var VDCoctd = document.getElementById('VDCoctd').value;
+                var RLoctd = document.getElementById('RLoctd').value;
+                var Vrizadooctd = document.getElementById('Vrizadooctd').value;
+
+                // Verifica si los valores ingresados son válidos
+                if (vioctd && foctd && VDCoctd && RLoctd && Vrizadooctd) {
+                    var vioctd = parseFloat(vioctd);
+                    var foctd = parseFloat(foctd);
+                    var VDCoctd = parseFloat(VDCoctd);
+                    var RLoctd = parseFloat(RLoctd);
+                    var Vrizadooctd = parseFloat(Vrizadooctd);
+
+                    var noctd = vioctd * 1.4142 / (VDCoctd + 0.7 + Vrizadooctd / 2);
+                    var Coctd = (1000000 * VDCoctd / RLoctd) / (2 * foctd * Vrizadooctd);
+
+                    document.getElementById('resultado1octd').innerText = "n: " + noctd.toFixed(2) + " ";
+                    document.getElementById('resultado2octd').innerText = "C: " + Coctd.toFixed(2) + " uF";
+
+                } else {
+                    document.getElementById('resultado1octd').innerText = "Por favor, ingrese valores válidos";
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            function calcularondacompletapconc() {
+
+                var virmsocp = document.getElementById('virmsocp').value;
+                var focp = document.getElementById('focp').value;
+                var nocp = document.getElementById('nocp').value;
+                var Cocp = document.getElementById('Cocp').value;
+                var RLocp = document.getElementById('RLocp').value;
+
+                // Verifica si los valores ingresados son válidos
+                if (nocp && virmsocp && Cocp && focp && RLocp) {
+                    var virmsocp = parseFloat(virmsocp);
+                    var focp = parseFloat(focp);
+                    var nocp = parseFloat(nocp);
+                    var Cocp = parseFloat(Cocp);
+                    var RLocp = parseFloat(RLocp);
+
+                    var Vmaxocp = (virmsocp * 1.4142 / nocp) - 1.4;
+                    var ZdeCocp = 1000000 / (4 * focp * Cocp);
+                    var IDCocp = 1000 * Vmaxocp / (ZdeCocp + RLocp);
+                    var VDCocp = (IDCocp / 1000) * RLocp;
+                    var Vrizadoocp = 2 * (Vmaxocp - VDCocp);
+                    var IDCdiodoocp = IDCocp / 2;
+
+                    document.getElementById('resultado1ocp').innerText = "Vmax: " + Vmaxocp.toFixed(2) + " V";
+                    document.getElementById('resultado2ocp').innerText = "IDC: " + IDCocp.toFixed(2) + " mA";
+                    document.getElementById('resultado3ocp').innerText = "VDC: " + VDCocp.toFixed(2) + " V";
+                    document.getElementById('resultado4ocp').innerText = "Vrizado: " + Vrizadoocp.toFixed(2) + " V";
+                    document.getElementById('resultado5ocp').innerText = "IDCdiodo: " + IDCdiodoocp.toFixed(2) + " mA";
+                } else {
+                    document.getElementById('resultado1ocp').innerText = "Por favor, ingrese valores válidos";
+                }
+            }
+
+
+            function calcularondacompletapconcd() {
+
+                var viocpd = document.getElementById('viocpd').value;
+                var focpd = document.getElementById('focpd').value;
+                var VDCocpd = document.getElementById('VDCocpd').value;
+                var RLocpd = document.getElementById('RLocpd').value;
+                var Vrizadoocpd = document.getElementById('Vrizadoocpd').value;
+
+                // Verifica si los valores ingresados son válidos
+                if (viocpd && focpd && VDCocpd && RLocpd && Vrizadoocpd) {
+                    var viocpd = parseFloat(viocpd);
+                    var focpd = parseFloat(focpd);
+                    var VDCocpd = parseFloat(VDCocpd);
+                    var RLocpd = parseFloat(RLocpd);
+                    var Vrizadoocpd = parseFloat(Vrizadoocpd);
+
+                    var nocpd = viocpd * 1.4142 / (VDCocpd + 1.4 + Vrizadoocpd / 2);
+                    var Cocpd = (1000000 * VDCocpd / RLocpd) / (2 * focpd * Vrizadoocpd);
+
+                    document.getElementById('resultado1ocpd').innerText = "n: " + nocpd.toFixed(2) + " ";
+                    document.getElementById('resultado2ocpd').innerText = "C: " + Cocpd.toFixed(2) + " uF";
+
+                } else {
+                    document.getElementById('resultado1ocpd').innerText = "Por favor, ingrese valores válidos";
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+            function calcularIDmax() {
+                var Vipico = parseFloat(document.getElementById('Vipico').value);
+                var V1 = parseFloat(document.getElementById('V1').value);
+                var V2 = parseFloat(document.getElementById('V2').value);
+                var R1ap = parseFloat(document.getElementById('R1ap').value);
+
+
+                // Verifica si los valores ingresados son válidos
+                if (!isNaN(Vipico) && !isNaN(V1) && !isNaN(V2) && !isNaN(R1ap)) {
+                    // Convierte las entradas a números
+                    Vipico = parseFloat(Vipico);
+                    V1 = parseFloat(V1);
+                    V2 = parseFloat(V2);
+                    R1ap = parseFloat(R1ap);
+
+
+                    // Calcula
+                    var ID2max = (Vipico - (V1 + 0.7)) / R1ap;
+                    var ID1max = ((V2 - 0.7) - (-Vipico)) / R1ap;
+
+                    // Muestra los resultados
+                    document.getElementById('resultadoID1max').innerText = "ID1max: " + ID1max.toFixed(2) + " mA";
+                    document.getElementById('resultadoID2max').innerText = "ID2max: " + ID2max.toFixed(2) + " mA";
+
+                } else {
+                    document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos para todos los campos.";
+                }
+            }
+
+            function calcularR1paraIDmax() {
+                var Vipicod = parseFloat(document.getElementById('Vipicod').value);
+                var V1d = parseFloat(document.getElementById('V1d').value);
+                var V2d = parseFloat(document.getElementById('V2d').value);
+                var IDmaxd = parseFloat(document.getElementById('IDmaxd').value);
+
+
+                // Verifica si los valores ingresados son válidos
+                if (!isNaN(Vipicod) && !isNaN(V1d) && !isNaN(V2d) && !isNaN(IDmaxd)) {
+                    // Convierte las entradas a números
+                    Vipicod = parseFloat(Vipicod);
+                    V1d = parseFloat(V1d);
+                    V2d = parseFloat(V2d);
+                    IDmaxd = parseFloat(IDmaxd);
+
+
+                    // Calcula
+                    var R1d = (0 - 0.7 + Vipicod) / IDmaxd;
+
+                    // Muestra los resultados
+                    document.getElementById('resultadoR1d').innerText = "R1: " + R1d.toFixed(2) + "kΩ";
+
+                } else {
+                    document.getElementById('resultado1').innerText = "Por favor, ingrese valores válidos para todos los campos.";
+                }
+            }
+
+
+
+
+
+
+            // Mostrar la primera sección por defecto
+            showSection('introduccion');
+
+        </script>
+
+
+
+
+</body>
+
+</html>
